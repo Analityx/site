@@ -2,17 +2,46 @@
 
 import Image from "next/image";
 import logoColor from "../public/assets/img/analityx-logo-color.png"
+import logoColor2 from "../public/assets/img/logo/PNG/a-color.png"
+
 import Link from "next/link";
 import "../public/assets/css/navbar.css"
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import throttle from 'lodash/throttle';
 
 export function Navbar() {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isNavbarFixed, setNavbarFixed] = useState(false);
+
+
+    const handleScroll = throttle(() => {
+        const scrollY = window.scrollY;
+        if (scrollY > 0.1) {
+            setNavbarFixed(true);
+        } else {
+            setNavbarFixed(false);
+        }
+    }, 200);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [handleScroll]);
+
+
     useEffect(() => {
         setIsMobileMenuOpen(false);
     }, [pathname]);
+
+    const logoClass = isNavbarFixed
+        ? 'logo-ax opacity-0 transition-opacity duration-300 ease-in-out'
+        : 'logo-full opacity-100 transition-opacity duration-300 ease-in-out';
+
+
     const links = [
         { name: "About Us", href: "/about-us" },
         { name: "Applied Analitycs", href: "/our-services" },
@@ -21,14 +50,14 @@ export function Navbar() {
         { name: "Contact", href: "/contact" }
     ]
     return (
-        <nav className={`${isMobileMenuOpen ? "h-auto mb-2" : "min-h-[15vh]"}`}>
-            <div className={`min-h-[15vh] w-full flex container mx-auto`}>
+        <nav className={`${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[8vh] navbar-nav fixed" : "h-[12vh] absolute"}  z-50 bg-white w-full transition-all duration-300 ease-in-out `}>
+            <div className={`h-full w-full flex items-center  container mx-auto`}>
                 <div className="w-1/2 flex items-center">
-                    <Link href="/">
+                    <Link href="/" >
                         <Image
-                            src={logoColor}
+                            src={isNavbarFixed ? logoColor2 : logoColor}
                             alt="Logo color Analityx"
-                            className="h-[13vh] max-sm:h-auto w-auto"
+                            className={`h-[8vh]  max-sm:h-auto w-auto transition-all duration-500 ease-in-out `}
                         />
                     </Link>
                 </div>
@@ -48,7 +77,7 @@ export function Navbar() {
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
-                                <li key={element.name} className={`${isActive ? 'active' : ''}`}><Link href={element.href}>{element.name}</Link></li>
+                                <li key={element.name} className={`${isActive ? 'active' : ''}`}><Link className="text-lg" href={element.href}>{element.name}</Link></li>
                             )
                         })}
                     </ul>
@@ -60,7 +89,7 @@ export function Navbar() {
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
-                                <li key={element.name} className={`${isActive ? 'text-white' : 'text-[#707070]'} w-full `}><Link href={element.href}>{element.name}</Link></li>
+                                <li key={element.name} className={`${isActive ? 'text-white' : 'text-[#707070]'} w-full  `}><Link href={element.href} className="text-lg">{element.name}</Link></li>
                             )
                         })}
                     </ul>
