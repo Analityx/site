@@ -50,9 +50,9 @@ export function Navbar() {
         { name: "Contact", href: "/contact" }
     ]
     return (
-        <nav className={`${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[10vh] navbar-nav fixed" : "h-[12vh] absolute"}  z-50 bg-white w-full transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[10vh] navbar-nav fixed" : "h-[12vh] fixed "}  z-50 bg-white transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
-                <div className="w-1/3 flex items-center">
+                <div className="w-1/3 max-sm:w-2/3 flex items-center">
                     <Link href="/" >
                         <Image
                             src={isNavbarFixed ? logoColor2 : logoColor}
@@ -61,7 +61,7 @@ export function Navbar() {
                         />
                     </Link>
                 </div>
-                <div className="w-2/3 flex items-center max-sm:justify-end max-sm:pe-4">
+                <div className="w-2/3 max-sm:w-1/3 flex items-center max-sm:justify-end max-sm:pe-4">
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
@@ -73,7 +73,7 @@ export function Navbar() {
                             </svg>
                         )}
                     </div>
-                    <ul className={`lg:flex hidden w-full h-full items-center justify-center lg:justify-end space-x-10 navbarFont navbarStyle`} >
+                    <ul className={` lg:flex hidden w-full  h-full items-center justify-center lg:justify-end space-x-10 navbarFont navbarStyle`} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
@@ -86,12 +86,12 @@ export function Navbar() {
                 </div>
             </div >
             {isMobileMenuOpen ? (
-                <div className="w-full">
-                    <ul className={`flex flex-wrap items-center justify-center text-center space-y-3`} >
+                <div className="w-full px-3 ">
+                    <ul className={`max-sm:bg-white rounded-xl pb-2 max-sm:px-3 flex flex-wrap items-center justify-center text-center divide-y `} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
-                                <li key={element.name} className={`${isActive ? 'text-white' : 'text-[#707070]'} w-full  `}><Link href={element.href} className="text-lg">{element.name}</Link></li>
+                                <li key={element.name} className={`${isActive ? 'text-white' : 'text-[#707070]'} w-full py-1 `}><Link href={element.href} className="text-lg max-sm:text-sm">{element.name}</Link></li>
                             )
                         })}
                     </ul>
