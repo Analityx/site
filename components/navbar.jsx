@@ -50,18 +50,18 @@ export function Navbar() {
         { name: "Contact", href: "/contact" }
     ]
     return (
-        <nav className={`${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[8vh] navbar-nav fixed" : "h-[12vh] absolute"}  z-50 bg-white w-full transition-all duration-300 ease-in-out `}>
+        <nav className={`${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[10vh] navbar-nav fixed" : "h-[12vh] absolute"}  z-50 bg-white w-full transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
-                <div className="w-1/2 flex items-center">
+                <div className="w-1/3 flex items-center">
                     <Link href="/" >
                         <Image
                             src={isNavbarFixed ? logoColor2 : logoColor}
                             alt="Logo color Analityx"
-                            className={`h-[8vh]  max-sm:h-auto w-auto transition-all duration-500 ease-in-out `}
+                            className={`${isNavbarFixed ? "h-[10vh]" : "h-[12vh]"}  max-sm:h-auto w-auto transition-all duration-500 ease-in-out `}
                         />
                     </Link>
                 </div>
-                <div className="w-1/2 flex items-center max-sm:justify-end max-sm:pe-4">
+                <div className="w-2/3 flex items-center max-sm:justify-end max-sm:pe-4">
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
@@ -73,11 +73,13 @@ export function Navbar() {
                             </svg>
                         )}
                     </div>
-                    <ul className={`lg:flex hidden w-full h-full items-center justify-center space-x-10 navbarFont navbarStyle`} >
+                    <ul className={`lg:flex hidden w-full h-full items-center justify-center lg:justify-end space-x-10 navbarFont navbarStyle`} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
-                                <li key={element.name} className={`${isActive ? 'active' : ''}`}><Link className="text-lg" href={element.href}>{element.name}</Link></li>
+                                <li key={element.name} className={`${isActive ? 'active' : ''}`}>
+                                    <Link className={`${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`} href={element.href}>{element.name}</Link>
+                                </li>
                             )
                         })}
                     </ul>
