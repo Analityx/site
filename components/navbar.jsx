@@ -50,14 +50,14 @@ export function Navbar() {
         { name: "Contact", href: "/contact" }
     ]
     return (
-        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2" : ""}  ${isNavbarFixed ? "h-[10vh] navbar-nav fixed" : "h-[12vh] fixed "}  z-50 bg-white transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed" : "h-[12vh] absolute "}  z-50 bg-white transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
                 <div className="w-1/3 max-sm:w-2/3 flex items-center">
                     <Link href="/" >
                         <Image
                             src={isNavbarFixed ? logoColor2 : logoColor}
                             alt="Logo color Analityx"
-                            className={`${isNavbarFixed ? "h-[10vh]" : "h-[12vh]"}  max-sm:h-auto w-auto transition-all duration-500 ease-in-out `}
+                            className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh]"}  w-auto transition-all duration-500 ease-in-out `}
                         />
                     </Link>
                 </div>
@@ -87,7 +87,7 @@ export function Navbar() {
             </div >
             {isMobileMenuOpen ? (
                 <div className="w-full px-3 ">
-                    <ul className={`max-sm:bg-white rounded-xl pb-2 max-sm:px-3 flex flex-wrap items-center justify-center text-center divide-y `} >
+                    <ul className={`max-sm:bg-white rounded-b-xl pb-2 max-sm:px-3 flex flex-wrap items-center justify-center text-center divide-y `} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             return (
