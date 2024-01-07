@@ -1,14 +1,16 @@
+"use client"
+
 import "../../public/assets/css/header.css"
+import Slider from "./sliderHeader"
 
 export function Header() {
     return (
-        <div className="pt-[15vh]">
-            <section className="img-header relative min-h-[80vh] rounded-[50px] ">
-                <div className="absolute top-[17vh] left-[10vh] w-1/3">
-                    <h1 className="text-[8rem] uppercase font-extrabold leading-[0.9] tracking-tighter">Global Solutions</h1>
-                    <p className="text-header w-[85%] mt-[4vh]">Nuestro enfoque se basa en analizar datos para brindar servicios y soluciones de alta calidad, cuidadosamente adaptados a los objetivos de nuestros clientes.</p>
-
-                </div>
+        <div className="pt-[15vh] max-sm:pt-[10vh]">
+            <section className="overflow-hidden relative w-full min-h-[80vh] max-sm:min-h-[70vh] rounded-[50px] max-sm:rounded-xl ">
+                <video className="object-cover absolute w-full h-full top-0 left-0" loop="loop" autoPlay="" playsInline="" muted="" preload="none" src="/assets/img/recursos/fondo-home.mp4" >
+                    <source type="video/mp4" src="/assets/img/recursos/fondo-home.mp4" />
+                </video>
+                <Slider />
             </section>
         </div>
     )
