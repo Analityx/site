@@ -1,8 +1,14 @@
 "use client";
+import { useRef } from "react";
 import { VerticalCard } from "./verticalCard";
-
+import { useScroll } from "framer-motion"
 
 export function Soluciones() {
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["start end", "end end"]
+    })
     const soluciones = [
         {
             imgSrc: "/assets/img/recursos/mapa.png",
@@ -16,11 +22,11 @@ export function Soluciones() {
         }
     ]
     return (
-        <section className="my-[10vh]">
+        <section className="my-[10vh] " ref={ref}>
             <div className="">
                 <h1 className="text-5xl">Soluciones</h1>
             </div>
-            <div className="w-full flex justify-center">
+            <div className="w-full flex justify-center" style={{ pathLength: scrollYProgress }}>
                 <div className="w-2/3 flex justify-center">
                     {soluciones.map((element) => (
                         <VerticalCard key={element.title} imageSrc={element.imgSrc} title={element.title} description={element.description} />
