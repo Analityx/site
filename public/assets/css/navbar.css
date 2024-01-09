@@ -1,13 +1,14 @@
-.navbarStyle li {
+.navbarStyle li,
+.navbarStyle button {
     position: relative;
     list-style: none;
     cursor: pointer;
     padding-bottom: 5px;
-    color: #707070
+    color: #707070;
 }
 
-
-.navbarStyle li::after {
+.navbarStyle li::after,
+.navbarStyle button::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -19,34 +20,37 @@
     transform-origin: right;
     transition: transform 0.35s ease-out;
     background-color: black;
-
 }
 
-.navbarStyle li:hover::after{
+.navbarStyle li:hover::after,
+.navbarStyle button:hover::after {
     transform: scaleX(1);
-    transform-origin: left ;
-    
+    transform-origin: left;
 }
 
-.navbarStyle li:hover {
-    color: #222222
+.navbarStyle li:hover,
+.navbarStyle button:hover {
+    color: #222222;
 }
 
-.navbarStyle li.active::after  {
-    background-color: rgb(30,161,49); 
-    transform-origin: left ;
+.navbarStyle li.active::after,
+.navbarStyle button.active::after {
+    background-color: rgb(30,161,49);
+    transform-origin: left;
     transform: scaleX(1);
 }
 
-.navbarStyle li.active {
+.navbarStyle li.active,
+.navbarStyle button.active {
     color: rgb(30,161,49);
     border-radius: 0px;
 }
 
-.navbarStyle li.active:hover::after{
+.navbarStyle li.active:hover::after,
+.navbarStyle button.active:hover::after {
     transform: scaleX(1);
-    transform-origin: left ;
-    background-color: rgb(30,161,49); 
+    transform-origin: left;
+    background-color: rgb(30,161,49);
 }
 
 .navbar-nav{

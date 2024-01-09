@@ -22,7 +22,7 @@ export function Soluciones() {
         }
     ]
     return (
-        <section className="my-[10vh] " ref={ref}>
+        <section className="my-[5vh] " ref={ref}>
             <div className="">
                 <h1 className="text-5xl">Soluciones</h1>
             </div>

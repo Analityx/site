@@ -14,7 +14,12 @@ export function Navbar() {
     const pathname = usePathname();
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isNavbarFixed, setNavbarFixed] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
 
     const handleScroll = throttle(() => {
         const scrollY = window.scrollY;
@@ -35,6 +40,7 @@ export function Navbar() {
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
+        setMenuOpen(false)
     }, [pathname]);
 
     const logoClass = isNavbarFixed
@@ -44,8 +50,12 @@ export function Navbar() {
 
     const links = [
         { name: "About Us", href: "/about-us" },
-        { name: "Applied Analitycs", href: "/our-services" },
-        { name: "Risk Management", href: "/risk-management" },
+        {
+            name: "Our Services", group: true, items: [
+                { name: "Applied Analitycs", href: "/our-services" },
+                { name: "Risk Management", href: "/risk-management" },
+            ]
+        },
         { name: "Medios", href: "/medios" },
         { name: "Contact", href: "/contact" }
     ]
@@ -76,6 +86,34 @@ export function Navbar() {
                     <ul className={` lg:flex hidden w-full  h-full items-center justify-center lg:justify-end space-x-10 navbarFont navbarStyle`} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
+                            if (element.group) {
+                                const isActiveGroup = pathname.startsWith(element.group);
+
+                                return (
+                                    <div className="relative" key={element.name}>
+                                        <button onClick={toggleMenu} className={`flex space-x-3 items-center font-bold ${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`}>
+                                            {element.name}
+                                            <div className="rotate-90 ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="#707070" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                                </svg>
+                                            </div>
+
+                                        </button>
+                                        {isMenuOpen && (
+                                            <ul className="absolute flex flex-wrap whitespace-nowrap top-full left-0 bg-white text-white mt-2 p-2 rounded">
+                                                {element.items.map((item) => (
+                                                    <li key={item.name} className={`${pathname === item.href ? 'active' : ''} my-2`}>
+                                                        <Link className={`${isNavbarFixed ? "text-xl" : "text-[1.3rem]"} py-2 px-3`} href={item.href}>
+                                                            {item.name}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                );
+                            }
                             return (
                                 <li key={element.name} className={`${isActive ? 'active' : ''}`}>
                                     <Link className={`${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`} href={element.href}>{element.name}</Link>
