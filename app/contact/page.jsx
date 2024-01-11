@@ -1,5 +1,5 @@
-import { FormContact } from "@/components/contact/form";
 import { VideoPage } from "@/components/video";
+import { FormContact } from "@/components/contact/form";
 
 export default function Contact() {
     return (

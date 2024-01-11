@@ -1,6 +1,4 @@
-"use client"
 
-import { Confian } from "@/components/home/confian";
 import { DescriptionHome } from "@/components/home/description";
 import { Header } from "@/components/home/header";
 import { Impacto } from "@/components/home/impacto";
