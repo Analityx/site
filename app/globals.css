@@ -12,6 +12,14 @@
   src: url('/public/assets/font/aspekta/webfonts/Aspekta-350.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Young';
+  font-style: normal;
+  font-weight: 350;
+  font-display: swap;
+  src: url('/public/assets/font/young/Young.ttf') format('ttf');
+}
+
 
 body {
   color: black;
@@ -22,4 +30,23 @@ body {
 a {
   font-family: 'Aspekta', sans-serif;
   font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+span {
+  font-family: 'Aspekta', sans-serif;
+  font-weight: 500;
+}
+
+
+.youngFont {
+  font-family: 'Young', sans-serif;
+  font-size: 400;
 }

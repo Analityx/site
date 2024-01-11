@@ -22,7 +22,7 @@ const Slider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        }, 7000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, [slides.length]);
@@ -33,22 +33,19 @@ const Slider = () => {
             className="absolute flex flex-wrap top-[15vh] left-[8vw]"
         >
             <motion.div
-                initial={{ x: -300, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1.2 }} className="w-full">
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.2, x: -300, ease: [0, 0.71, 0.2, 1.01] }} className="w-full">
                 <h1 className="text-[8rem] text-white w-1/3 max-sm:text-start max-sm:text-[3.6rem] uppercase font-extrabold leading-[0.9] tracking-tighter">
                     {slides[currentSlide].title}
                 </h1>
             </motion.div>
-            <div
-                initial={{ x: -200, opacity: 0 }}
+            <motion.div
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 1.7 }}
                 className="w-full mt-[4vh]">
                 <p className="text-2xl text-white w-[65%] max-sm:text-start max-sm:w-full max-sm:font-bold max-sm:text-lg ">
                     Nuestro enfoque se basa en analizar datos para brindar servicios y soluciones digitales a problemas actuales, cuidadosamente adaptados a los objetivos de nuestros clientes.
                 </p>
-            </div>
+            </motion.div>
         </motion.div>
     );
 };

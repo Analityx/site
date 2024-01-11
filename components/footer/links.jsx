@@ -27,7 +27,7 @@ export function LinksFooter() {
     return (
         <div className="flex flex-wrap items-center justify-center min-h-[19vh]  py-5">
             {linksUtils.map((element) => (
-                <Link key={element.title} href={element.link} className="w-full text-xl ps-3 mb-2 text-white hover:text-[#0A0AB2]">
+                <Link key={element.title} href={element.link} className="w-full text-xl ps-3 mb-2 text-white hover:text-[#4ee965]">
                     {element.title}
                 </Link>
             ))}

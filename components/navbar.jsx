@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logoColor from "../public/assets/img/analityx-logo-color.png"
 import logoColor2 from "../public/assets/img/logo/PNG/a-color.png"
-
+import logoBlanco from "../public/assets/img/logo/PNG/analityx-logo-blanco-color.png"
 import Link from "next/link";
 import "../public/assets/css/navbar.css"
 import { usePathname } from "next/navigation";
@@ -15,7 +15,7 @@ export function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isNavbarFixed, setNavbarFixed] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-
+    const [isHome, setIsHome] = useState()
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -40,7 +40,12 @@ export function Navbar() {
 
     useEffect(() => {
         setIsMobileMenuOpen(false);
-        setMenuOpen(false)
+        setMenuOpen(false);
+        if (pathname === "/") {
+            setIsHome(true)
+        } else {
+            setIsHome(false)
+        }
     }, [pathname]);
 
     const logoClass = isNavbarFixed
@@ -52,26 +57,27 @@ export function Navbar() {
         { name: "About Us", href: "/about-us" },
         {
             name: "Our Services", group: true, items: [
-                { name: "Applied Analitycs", href: "/our-services" },
-                { name: "Risk Management", href: "/risk-management" },
+                { name: "Applied Analitycs", href: "/our-services/applied-analytics" },
+                { name: "Risk Management", href: "/our-services/risk-management" },
             ]
         },
         { name: "Medios", href: "/medios" },
         { name: "Contact", href: "/contact" }
     ]
+
     return (
-        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed" : "h-[12vh] absolute "}  z-50 bg-white transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed bg-white" : "h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
                 <div className="w-1/3 max-sm:w-2/3 flex items-center">
                     <Link href="/" >
                         <Image
-                            src={isNavbarFixed ? logoColor2 : logoColor}
+                            src={isNavbarFixed ? logoColor2 : (isHome ? logoColor : logoBlanco)}
                             alt="Logo color Analityx"
                             className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh]"}  w-auto transition-all duration-500 ease-in-out `}
                         />
                     </Link>
                 </div>
-                <div className="w-2/3 max-sm:w-1/3 flex items-center max-sm:justify-end max-sm:pe-4">
+                <div className={`w-2/3 h-full max-sm:w-1/3 flex  max-sm:pe-4 ${isNavbarFixed ? "items-center max-sm:justify-end" : "bg-white rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
@@ -83,7 +89,7 @@ export function Navbar() {
                             </svg>
                         )}
                     </div>
-                    <ul className={` lg:flex hidden w-full  h-full items-center justify-center lg:justify-end space-x-10 navbarFont navbarStyle`} >
+                    <ul className={` lg:flex hidden w-full  h-full items-center justify-center ${isNavbarFixed ? "lg:justify-end" : "lg:justify-center"} transition-all duration-1000 ease-in-out space-x-10 navbarFont navbarStyle`} >
                         {links.map((element) => {
                             const isActive = pathname === (element.href)
                             if (element.group) {

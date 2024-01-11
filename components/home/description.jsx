@@ -33,7 +33,7 @@ export function DescriptionHome() {
                     </div>
                     <div className="w-2/3 mx-[5vw]">
                         <div className="p-3  text-start border-b-[#1EA131] border-b">
-                            <h1 className="text-4xl font-bold">{element.title}</h1>
+                            <h1 className="text-4xl font-bold text-[#474747]">{element.title}</h1>
                         </div>
                         <div className="pt-6">
                             <p>{element.descriptions}</p>
