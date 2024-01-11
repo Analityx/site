@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { VerticalCard } from "./verticalCard";
 import { useScroll } from "framer-motion"
+import { Reveal } from "../utils/reveal";
 
 export function Soluciones() {
     const ref = useRef(null)
@@ -24,7 +25,9 @@ export function Soluciones() {
     return (
         <section className="my-[5vh] " ref={ref}>
             <div className="">
-                <h1 className="text-5xl">Soluciones</h1>
+                <Reveal>
+                    <h1 className="text-5xl">Soluciones</h1>
+                </Reveal>
             </div>
             <div className="w-full flex justify-center" style={{ pathLength: scrollYProgress }}>
                 <div className="w-2/3 flex justify-center">

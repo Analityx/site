@@ -1,3 +1,5 @@
+"use client"
+
 import { Confian } from "@/components/home/confian";
 import { DescriptionHome } from "@/components/home/description";
 import { Header } from "@/components/home/header";
@@ -11,7 +13,6 @@ export default function HomePage() {
             <DescriptionHome />
             <Soluciones />
             <Impacto />
-            {/* <Confian /> */}
         </main>
     )
 };

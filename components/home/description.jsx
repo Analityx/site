@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { motion } from "framer-motion"
+import { Reveal } from "../utils/reveal";
 
 export function DescriptionHome() {
     const descriptions = [
@@ -21,22 +23,29 @@ export function DescriptionHome() {
     return (
         <section className="w-full mt-[5vh] ">
             {descriptions.map((element) => (
+
                 <div className={`w-full flex min-h-[35vh] mb-6 ${element.id === "1" ? "flex-row" : "  flex-row-reverse"} `} key={element.id}>
                     <div className="w-1/3">
-                        <Image
-                            src={element.image}
-                            alt="Analitycs illustration"
-                            width={150}
-                            height={150}
-                            className="w-full max-h-[30vh] p-5"
-                        />
+                        <Reveal>
+                            <Image
+                                src={element.image}
+                                alt="Analitycs illustration"
+                                width={150}
+                                height={150}
+                                className="w-full max-h-[30vh] p-5"
+                            />
+                        </Reveal>
                     </div>
                     <div className="w-2/3 mx-[5vw]">
                         <div className="p-3  text-start border-b-[#1EA131] border-b">
-                            <h1 className="text-4xl font-bold text-[#474747]">{element.title}</h1>
+                            <Reveal>
+                                <h1 className="text-4xl font-bold text-[#474747]">{element.title}</h1>
+                            </Reveal>
                         </div>
                         <div className="pt-6">
-                            <p>{element.descriptions}</p>
+                            <Reveal>
+                                <p>{element.descriptions}</p>
+                            </Reveal>
                         </div>
                     </div>
                 </div>

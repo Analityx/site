@@ -49,7 +49,7 @@ export function FormContact() {
             </div>
             <div className="w-1/2">
                 <form action="" className="my-5 space-y-[3vh] text-center">
-                    <h1 className="text-4xl  " >Completá el formulario</h1>
+                    <h1 className="text-4xl font-bold text-[#707070] " >Completá el formulario</h1>
                     <div className="input-group">
                         <input type="text" autocomplete="name" id="name" name="name" required className="input-alone" value={name} onChange={(e) => setName(e.target.value)} />
                         <label className='label-alone' for="name">Nombre Completo</label>

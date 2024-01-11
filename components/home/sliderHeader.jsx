@@ -33,8 +33,9 @@ const Slider = () => {
             className="absolute flex flex-wrap top-[15vh] left-[8vw]"
         >
             <motion.div
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.2, x: -300, ease: [0, 0.71, 0.2, 1.01] }} className="w-full">
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0, }}
+                transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }} className="w-full">
                 <h1 className="text-[8rem] text-white w-1/3 max-sm:text-start max-sm:text-[3.6rem] uppercase font-extrabold leading-[0.9] tracking-tighter">
                     {slides[currentSlide].title}
                 </h1>
