@@ -1,5 +1,7 @@
+import { Reveal } from "../utils/reveal"
+
 export function IntroServices({ type }) {
-    
+
 
     const intro = {
         title: "Análisis de datos con enfoque humano",
@@ -26,13 +28,19 @@ export function IntroServices({ type }) {
     return (
         <section className="w-full flex pt-[5vh]">
             <div className="w-1/3 px-4">
-                <h1 className="text-5xl font-bold text-[#474747]">{intro.title}</h1>
+                <Reveal>
+                    <h1 className="text-5xl font-bold text-[#474747]">{intro.title}</h1>
+                </Reveal>
             </div>
             <div className="w-2/3 px-3">
                 {intro.description.map((element) => (
                     <div key={element.title} className="mb-4">
-                        <h1 className="text-xl font-bold text-[#474747]">{element.title ? element.title : ''}</h1>
-                        <p className="mt-3">{element.text}</p>
+                        <Reveal>
+                            <h1 className="text-xl font-bold text-[#474747]">{element.title ? element.title : ''}</h1>
+                        </Reveal>
+                        <Reveal>
+                            <p className="mt-3">{element.text}</p>
+                        </Reveal>
                     </div>
                 ))}
             </div>

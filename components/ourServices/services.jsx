@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Reveal } from "../utils/reveal"
 
 export default function Services({ type }) {
     const typesServices = [
@@ -111,11 +112,17 @@ export default function Services({ type }) {
                     element.types.map((e) => (
                         <div key={e.title} className="bg-[#0A0AAB] rounded-xl w-[29%] mx-[2%] my-3 px-6 py-4">
                             <div className="w-full flex justify-center py-5">
-                                <Image src={e.logo} alt={e.title} width={200} height={200} />
+                                <Reveal>
+                                    <Image src={e.logo} alt={e.title} width={200} height={200} />
+                                </Reveal>
                             </div>
                             <div className="text-white space-y-3 pb-4 ">
-                                <h1 className="text-4xl youngFont font-[350]" >{e.title}</h1>
-                                <p className="youngFont text-sm "> {e.description}</p>
+                                <Reveal>
+                                    <h1 className="text-4xl youngFont font-[350]" >{e.title}</h1>
+                                </Reveal>
+                                <Reveal>
+                                    <p className="youngFont text-sm "> {e.description}</p>
+                                </Reveal>
                             </div>
                         </div>
                     ))
@@ -124,7 +131,9 @@ export default function Services({ type }) {
             <div className="absolute bottom-[200px] right-0 w-[29%] mx-[2%] px-6 ">
                 <div className="flex">
                     <Link href={type === "appliedAnalytics" ? "/our-services/risk-management" : "/our-services/applied-analytics"} className="relative text-4xl text-[#1EA131] group hover:text-[#1a7528]">
-                        Conoce nuestras soluciones en {type === "appliedAnalytics" ? "Risk Management" : "Applied Analytics"}
+                        <Reveal>
+                            Conoce nuestras soluciones en {type === "appliedAnalytics" ? "Risk Management" : "Applied Analytics"}
+                        </Reveal>
                         <Image
                             src="/assets/img/recursos/flecha-plena-new.png"
                             alt="Flecha plena"

@@ -59,31 +59,23 @@ export function FormContact() {
                     <Reveal>
                         <h1 className="text-4xl font-bold text-[#707070] " >Completá el formulario</h1>
                     </Reveal>
+                    <div className="input-group">
+                        <input type="text" autocomplete="name" id="name" name="name" required className="input-alone" value={name} onChange={(e) => setName(e.target.value)} />
+                        <label className='label-alone' for="name">Nombre Completo</label>
+                    </div>
+                    <div className="input-group">
+                        <input type="number" autocomplete="phone" id="phone" name="phone" required className="input-alone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                        <label className='label-alone' for="phone">Teléfono</label>
+                    </div>
+                    <div className="input-group">
+                        <input type="text" autocomplete="address" id="address" name="address" required className="input-alone" value={address} onChange={(e) => setAddress(e.target.value)} />
+                        <label className='label-alone' for="address">Dirección</label>
+                    </div>
+                    <div className="input-group">
+                        <textarea id="message" name="message" required className="input-alone" rows="5" style={{ overflowWrap: 'break-word' }} value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <label className='label-alone' for="message">Consulta</label>
+                    </div>
 
-                    <div className="input-group">
-                        <Reveal>
-                            <input type="text" autocomplete="name" id="name" name="name" required className="input-alone" value={name} onChange={(e) => setName(e.target.value)} />
-                            <label className='label-alone' >Nombre Completo</label>
-                        </Reveal>
-                    </div>
-                    <div className="input-group">
-                        <Reveal>
-                            <input type="number" autocomplete="phone" id="phone" name="phone" required className="input-alone" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                            <label className='label-alone'>Teléfono</label>
-                        </Reveal>
-                    </div>
-                    <div className="input-group">
-                        <Reveal>
-                            <input type="text" autocomplete="address" id="address" name="address" required className="input-alone" value={address} onChange={(e) => setAddress(e.target.value)} />
-                            <label className='label-alone' >Dirección</label>
-                        </Reveal>
-                    </div>
-                    <div className="input-group">
-                        <Reveal>
-                            <textarea id="message" name="message" required className="input-alone" rows="5" style={{ overflowWrap: 'break-word' }} value={message} onChange={(e) => setMessage(e.target.value)} />
-                            <label className='label-alone' >Consulta</label>
-                        </Reveal>
-                    </div>
                     <div className="w-full flex justify-end">
                         <div className="w-1/3">
                             <Reveal>
