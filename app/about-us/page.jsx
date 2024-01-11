@@ -3,6 +3,11 @@ import { IntroAbout } from "@/components/about/intro";
 import { Impacto } from "@/components/home/impacto";
 import { VideoPage } from "@/components/video";
 
+export const metadata = {
+    title: "About Us - Analityx",
+    description: "Site Analityx",
+};
+
 export default function AboutUs() {
     return (
         <section className=" w-full">

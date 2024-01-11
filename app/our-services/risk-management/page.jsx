@@ -2,6 +2,12 @@ import { IntroServices } from "@/components/ourServices/intro";
 import Services from "@/components/ourServices/services";
 import { VideoPage } from "@/components/video";
 
+
+export const metadata = {
+    title: "Risk Management - Analityx",
+    description: "Site Analityx",
+};
+
 export default function RiskManagement() {
     return (
         <section className=" w-full">
