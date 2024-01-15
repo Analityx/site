@@ -21,7 +21,6 @@ export const Reveal = ({children, width = "fit-content"}: Props)=>{
             mainControls.start("visible")
             slideControls.start("visible")
         }
-        console.log(isInView)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     },[isInView])
 
