@@ -46,6 +46,7 @@ export function Navbar() {
         } else {
             setIsHome(false)
         }
+
     }, [pathname]);
 
     const logoClass = isNavbarFixed
@@ -54,30 +55,30 @@ export function Navbar() {
 
 
     const links = [
-        { name: "About Us", href: "/about-us" },
+        { name: "About Us", group: false, href: "/about-us" },
         {
-            name: "Our Services", group: true, items: [
+            name: "Our Services", group: true, href: ' ', items: [
                 { name: "Applied Analitycs", href: "/our-services/applied-analytics" },
                 { name: "Risk Management", href: "/our-services/risk-management" },
             ]
         },
-        { name: "Medios", href: "/medios" },
-        { name: "Contact", href: "/contact" }
+        { name: "Medios", group: false, href: "/medios" },
+        { name: "Contact", group: false, href: "/contact" }
     ]
 
     return (
-        <nav className={`w-[100vw] ${isMobileMenuOpen ? "mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed bg-white" : "h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] ${isMobileMenuOpen ? " mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed bg-white " : "h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
                 <div className="w-1/3 max-sm:w-2/3 flex items-center">
                     <Link href="/" >
                         <Image
                             src={isNavbarFixed ? logoColor2 : (isHome ? logoColor : logoBlanco)}
                             alt="Logo color Analityx"
-                            className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh]"}  w-auto transition-all duration-500 ease-in-out `}
+                            className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh] max-sm:h-auto"}  w-auto transition-all duration-500 ease-in-out `}
                         />
                     </Link>
                 </div>
-                <div className={`w-2/3 h-full max-sm:w-1/3 flex  max-sm:pe-4 ${isNavbarFixed ? "items-center max-sm:justify-end" : "bg-white rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
+                <div className={`w-2/3 min-sm:h-full max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center max-sm:justify-end" : "bg-white rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
@@ -91,10 +92,8 @@ export function Navbar() {
                     </div>
                     <ul className={` lg:flex hidden w-full  h-full items-center justify-center ${isNavbarFixed ? "lg:justify-end" : "lg:justify-center"} transition-all duration-1000 ease-in-out space-x-10 navbarFont navbarStyle`} >
                         {links.map((element) => {
-                            const isActive = pathname === (element.href)
                             if (element.group) {
                                 const isActiveGroup = pathname.startsWith(element.group);
-
                                 return (
                                     <div className="relative" key={element.name}>
                                         <button onClick={toggleMenu} className={`flex space-x-3 items-center font-bold ${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`}>
@@ -119,24 +118,58 @@ export function Navbar() {
                                         )}
                                     </div>
                                 );
+                            } else {
+                                const isActive = pathname === (element.href)
+                                return (
+                                    <li key={element.name} className={`${isActive ? 'active' : ''}`}>
+                                        <Link
+                                            className={`${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`}
+                                            href={element.href}>
+                                            {element.name}
+                                        </Link>
+                                    </li>
+                                )
                             }
-                            return (
-                                <li key={element.name} className={`${isActive ? 'active' : ''}`}>
-                                    <Link className={`${isNavbarFixed ? "text-xl" : "text-[1.3rem]"}`} href={element.href}>{element.name}</Link>
-                                </li>
-                            )
                         })}
                     </ul>
                 </div>
             </div >
             {isMobileMenuOpen ? (
-                <div className="w-full px-3 ">
+                <div className={`w-full px-3 ${isMobileMenuOpen ? "absolute top-[10vh]" : ""} `}>
                     <ul className={`max-sm:bg-white rounded-b-xl pb-2 max-sm:px-3 flex flex-wrap items-center justify-center text-center divide-y `} >
                         {links.map((element) => {
-                            const isActive = pathname === (element.href)
-                            return (
-                                <li key={element.name} className={`${isActive ? 'text-white' : 'text-[#707070]'} w-full py-1 `}><Link href={element.href} className="text-lg max-sm:text-sm">{element.name}</Link></li>
-                            )
+                            if (element.group) {
+                                const isActiveGroup = pathname.startsWith(element.group);
+                                return (
+                                    <div className={`relative ${isActiveGroup ? 'text-white' : 'text-[#707070]'} w-full text-center py-1 items-center flex justify-center`} key={element.name}>
+                                        <button onClick={toggleMenu} className={`flex space-x-3 items-center text-center text-lg max-sm:text-sm font-bold`}>
+                                            {element.name}
+                                            <div className="rotate-90 ">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="#707070" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                                                </svg>
+                                            </div>
+
+                                        </button>
+                                        {isMenuOpen && (
+                                            <ul className="absolute flex flex-wrap whitespace-nowrap top-full w-full divide-y left-0 bg-white  p-2 rounded-xl border ">
+                                                {element.items.map((item) => (
+                                                    <li key={item.name} className={`${pathname === item.href ? 'text-[#1eaa32]' : 'text-[#707070]'} w-full py-1`}>
+                                                        <Link className={`text-lg max-sm:text-sm w-full `} href={item.href}>
+                                                            {item.name}
+                                                        </Link>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        )}
+                                    </div>
+                                );
+                            } else {
+                                const isActive = pathname === (element.href)
+                                return (
+                                    <li key={element.name} className={`${isActive ? 'text-[#1eaa32]' : 'text-[#707070]'} w-full py-1 `}><Link href={element.href} className="text-lg max-sm:text-sm">{element.name}</Link></li>
+                                )
+                            }
                         })}
                     </ul>
                 </div>

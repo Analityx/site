@@ -29,8 +29,8 @@ export function Soluciones() {
                     <h1 className="text-5xl">Soluciones</h1>
                 </Reveal>
             </div>
-            <div className="w-full flex justify-center" style={{ pathLength: scrollYProgress }}>
-                <div className="w-2/3 flex justify-center">
+            <div className="w-full flex max-sm:flex-wrap justify-center" style={{ pathLength: scrollYProgress }}>
+                <div className="w-2/3 max-sm:flex-wrap max-sm:w-full flex justify-center">
                     {soluciones.map((element) => (
                         <VerticalCard key={element.title} imageSrc={element.imgSrc} title={element.title} description={element.description} />
                     ))}

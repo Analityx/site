@@ -21,11 +21,11 @@ export function DescriptionHome() {
 
 
     return (
-        <section className="w-full mt-[5vh] ">
+        <section className="w-full mt-[5vh] max-sm:mt-[2vh] ">
             {descriptions.map((element) => (
 
-                <div className={`w-full flex min-h-[35vh] mb-6 ${element.id === "1" ? "flex-row" : "  flex-row-reverse"} `} key={element.id}>
-                    <div className="w-1/3">
+                <div className={`w-full flex min-h-[35vh] mb-6 ${element.id === "1" ? "flex-row" : "  flex-row-reverse"} max-sm:flex-wrap max-sm:mb-[4vh] `} key={element.id}>
+                    <div className="w-1/3 max-sm:w-full max-sm:mb-3">
                         <Reveal>
                             <Image
                                 src={element.image}
@@ -36,7 +36,7 @@ export function DescriptionHome() {
                             />
                         </Reveal>
                     </div>
-                    <div className="w-2/3 mx-[5vw]">
+                    <div className="w-2/3 mx-[5vw] max-sm:w-full">
                         <div className="p-3  text-start border-b-[#1EA131] border-b">
                             <Reveal>
                                 <h1 className="text-4xl font-bold text-[#474747]">{element.title}</h1>

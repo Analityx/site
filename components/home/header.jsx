@@ -20,7 +20,7 @@ export function Header() {
                 }
             }
         }}
-            className="pt-[15vh] max-sm:pt-[10vh] min-h-[100vh]">
+            className="pt-[15vh] max-sm:pt-[10vh] min-h-[100vh] max-sm:px-5">
             <section className="overflow-hidden relative w-full min-h-[70vh] max-sm:min-h-[70vh] rounded-[50px] max-sm:rounded-xl">
                 <video className="object-cover absolute w-full h-full top-0 left-0" autoPlay loop playsInline muted>
                     <source type="video/mp4" src="/assets/img/recursos/fondo-home.mp4" />

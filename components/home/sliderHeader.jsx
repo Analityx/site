@@ -36,14 +36,14 @@ const Slider = () => {
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0, }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }} className="w-full">
-                <h1 className="text-[8rem] text-white w-1/3 max-sm:text-start max-sm:text-[3.6rem] uppercase font-extrabold leading-[0.9] tracking-tighter">
+                <h1 className="text-[8rem] text-white w-1/3 max-sm:text-start max-sm:text-[2.5rem] uppercase font-extrabold leading-[0.9] tracking-tighter">
                     {slides[currentSlide].title}
                 </h1>
             </motion.div>
             <motion.div
                 animate={{ x: 0, opacity: 1 }}
                 className="w-full mt-[4vh]">
-                <p className="text-2xl text-white w-[65%] max-sm:text-start max-sm:w-full max-sm:font-bold max-sm:text-lg ">
+                <p className="text-2xl text-white w-[65%] max-sm:text-start max-sm:w-full max-sm:font-bold max-sm:text-base ">
                     Nuestro enfoque se basa en analizar datos para brindar servicios y soluciones digitales a problemas actuales, cuidadosamente adaptados a los objetivos de nuestros clientes.
                 </p>
             </motion.div>

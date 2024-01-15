@@ -10,10 +10,10 @@ import { Reveal } from "./utils/reveal";
 
 export function Footer() {
     return (
-        <footer className="mx-auto container mt-4 mb-2  ">
+        <footer className="mx-auto container mt-4 mb-2   ">
             <Reveal>
-                <div className="bg-[#1EA131] w-full rounded-xl min-h-[20vh] flex py-5 px-3">
-                    <div className="w-1/4 flex flex-wrap ">
+                <div className="bg-[#1EA131] w-full max-sm:flex-wrap rounded-xl min-h-[20vh] flex py-5 px-3 max-sm:mb-3">
+                    <div className="w-1/4 max-sm:w-full flex flex-wrap ">
                         <Link href="/" className="w-full">
                             <Image src="/assets/img/logo/SVG/analityx-logo-blanco-color.svg" className="w-full" width={350} height={100} alt="Analityx color" />
                         </Link>
@@ -21,13 +21,13 @@ export function Footer() {
                             <LogosRedes />
                         </div>
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-1/4 max-sm:hidden">
                         <LinksFooter />
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-1/4 max-sm:w-full">
                         <InformacionFooter />
                     </div>
-                    <div className="w-1/4">
+                    <div className="w-1/4 max-sm:hidden">
                         <MapaFooter />
                     </div>
                 </div>
