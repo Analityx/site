@@ -58,13 +58,20 @@ export function EquipoAbout() {
                 {equipo.map((element) => (
                     <div className="w-1/2 max-sm:w-full max-sm:mb-3 bg-[#0A0AAB] py-4 px-6 mx-6  rounded-xl max-sm:rounedd-2xl" key={element.name}>
                         <Reveal>
-                            <div className="overflow-hidden max-h-[40vh] rounded flex justify-center">
+                            <div className="overflow-hidden max-h-[40vh] max-sm:h-[60vh] rounded flex justify-center max-sm:rounded-xl">
                                 <Image
                                     src={element.image}
                                     alt={element.name}
-                                    className="group-hover max-w-[150%] h-full rounded object-cover object-center filter grayscale"
+                                    className="max-sm:hidden group-hover max-w-[150%] h-full rounded object-cover object-center filter grayscale max-sm:w-[250%] max-sm:rounded-xl"
                                     width={1920}
                                     height={1080}
+                                />
+                                <Image
+                                    src={element.image}
+                                    alt={element.name}
+                                    className="hidden max-sm:block group-hover max-w-[150%] h-full rounded object-cover object-center filter grayscale max-sm:w-[250%] max-sm:rounded-xl"
+                                    width={500}
+                                    height={500}
                                 />
                             </div>
                         </Reveal>
@@ -73,7 +80,7 @@ export function EquipoAbout() {
                                 <h1 className="text-3xl font-bold" >{element.name}</h1>
                             </Reveal>
                             {showFullDescription[element.id] ? (
-                                <div>
+                                <div className="hidden max-sm:block">
                                     <Reveal>
                                         <p>{hiddenDes[element.id]}</p>
                                     </Reveal>
@@ -87,7 +94,7 @@ export function EquipoAbout() {
 
                                 </div>
                             ) : (
-                                <div>
+                                <div className="hidden max-sm:block">
                                     <Reveal>
                                         <p>{element.description.substring(0, 100)}</p>
                                     </Reveal>
