@@ -110,7 +110,7 @@ export default function Services({ type }) {
             {typesServices.map((element) => (
                 element.type === type && (
                     element.types.map((e) => (
-                        <div key={e.title} className="bg-[#0A0AAB] rounded-xl w-[29%] mx-[2%] my-3 px-6 py-4">
+                        <div key={e.title} className="bg-[#0A0AAB] rounded-xl w-[29%] max-sm:w-full max-sm:mx-4 mx-[2%] my-3 px-6 py-4">
                             <div className="w-full flex justify-center py-5">
                                 <Reveal>
                                     <Image src={e.logo} alt={e.title} width={200} height={200} />
@@ -128,7 +128,7 @@ export default function Services({ type }) {
                     ))
                 )
             ))}
-            <div className="absolute bottom-[200px] right-0 w-[29%] mx-[2%] px-6 ">
+            <div className="absolute max-sm:relative max-sm:w-full max-sm:bottom-0 max-sm:mt-[5vh] max-sm:mb-[10vh] bottom-[200px] right-0 w-[29%] mx-[2%] px-6 ">
                 <div className="flex">
                     <Link href={type === "appliedAnalytics" ? "/our-services/risk-management" : "/our-services/applied-analytics"} className="relative text-4xl text-[#1EA131] group hover:text-[#1a7528]">
                         <Reveal>
@@ -137,14 +137,14 @@ export default function Services({ type }) {
                         <Image
                             src="/assets/img/recursos/flecha-plena-new.png"
                             alt="Flecha plena"
-                            className="w-[4vw] absolute right-0 transition duration-300 ease-in-out opacity-100 group-hover:opacity-0"
+                            className="w-[4vw] max-sm:w-[16vw] absolute right-0 transition duration-300 ease-in-out opacity-100 group-hover:opacity-0"
                             width={100}
                             height={100}
                         />
                         <Image
                             src="/assets/img/recursos/flecha-plena-hover.png"
                             alt="Nueva flecha"
-                            className="w-[4vw] absolute right-0 transition duration-300 ease-in-out opacity-0 group-hover:opacity-100"
+                            className="w-[4vw] max-sm:w-[10vw] absolute right-0 transition duration-300 ease-in-out opacity-0 group-hover:opacity-100"
                             width={100}
                             height={100}
                         />

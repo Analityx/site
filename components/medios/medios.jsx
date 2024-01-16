@@ -31,10 +31,10 @@ export function MediosCasos() {
     ]
 
     return (
-        <section className="flex flex-wrap space-x-[2%] my-[5%] justify-center">
+        <section className="flex flex-wrap space-x-[2%] my-[5%] justify-center max-sm:px-4">
             {medioslinks.map((element) => (
-                <div key={element.title} className="w-[20%] min-h-[25%] bg-[#E7E7E7] p-5 rounded-xl hover:bg-[#cfcfcf]">
-                    <Link href={element.link}>
+                <div key={element.title} className="w-[20%] max-sm:w-full min-h-[25%] max-sm:h-full max-sm:my-5 bg-[#E7E7E7] p-5 rounded-xl hover:bg-[#cfcfcf]">
+                    <Link href={element.link} target="_blank">
                         <div className="h-2/5 flex items-center text-center">
                             <Reveal>
                                 <h1 className="mb-3 font-bold text-xl">{element.titulo}</h1>

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { Reveal } from "../utils/reveal";
+import Link from "next/link";
 
-export const VerticalCard = ({ imageSrc, title, description }) => {
+export const VerticalCard = ({ imageSrc, title, description, href }) => {
     return (
         <div className="mx-3 w-1/2 max-sm:w-full my-[5vh] max-sm:my-3 flex justify-center items-center">
             <div className="w-full bg-[#1EA131] rounded-xl overflow-hidden shadow-md mb-4 py-4 px-5">
@@ -16,9 +17,11 @@ export const VerticalCard = ({ imageSrc, title, description }) => {
                         <p className="mb-4  ">{description}</p>
                     </Reveal>
                     <Reveal>
-                        <button className="bg-transparent border-2 font-bold border-white rounded-[20px] text-white px-4 py-2 hover:bg-white hover:text-black">
-                            Conocé más
-                        </button>
+                        <div className="max-sm:min-h-[7vh] relative">
+                            <Link href={href} className="bg-transparent border-2 my-2 font-bold border-white rounded-[20px] text-white px-4 py-2 hover:bg-white hover:text-black absolute">
+                                Conocé más
+                            </Link>
+                        </div>
                     </Reveal>
 
 

@@ -78,7 +78,7 @@ export function Navbar() {
                         />
                     </Link>
                 </div>
-                <div className={`w-2/3 min-sm:h-full max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center max-sm:justify-end" : "bg-white rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
+                <div className={`w-2/3 min-sm:h-full max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center max-sm:justify-end max-sm:pe-4" : "bg-white rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">

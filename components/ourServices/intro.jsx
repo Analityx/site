@@ -26,13 +26,13 @@ export function IntroServices({ type }) {
     }
 
     return (
-        <section className="w-full flex pt-[5vh]">
-            <div className="w-1/3 px-4">
+        <section className="w-full flex max-sm:flex-wrap pt-[5vh] max-sm:px-4">
+            <div className="w-1/3 max-sm:w-full px-4 max-sm:px-2">
                 <Reveal>
-                    <h1 className="text-5xl font-bold text-[#474747]">{intro.title}</h1>
+                    <h1 className="text-5xl font-bold text-[#474747] max-sm:text-4xl max-sm:mb-5">{intro.title}</h1>
                 </Reveal>
             </div>
-            <div className="w-2/3 px-3">
+            <div className="w-2/3 max-sm:w-full px-3">
                 {intro.description.map((element) => (
                     <div key={element.title} className="mb-4">
                         <Reveal>
