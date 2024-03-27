@@ -55,7 +55,7 @@ export function Navbar() {
 
 
     const links = [
-        { name: "Home", group: false, href: "./" },
+        { name: "Home", group: false, href: "/" },
         { name: "Sobre Nosotros", group: false, href: "/about-us" },
         {
             name: "Our Services", group: true, href: ' ', items: [
@@ -84,7 +84,7 @@ export function Navbar() {
                     )}
 
                 </div>
-                <div className={` min-sm:h-full  max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center w-2/3  max-sm:justify-end max-sm:pe-4" : (`${isHome ? "w-full" : "w-1/2" } min-w-[30vw] bg-white py-5 max-sm:py-0  rounded-xl justify-center`)} transition-all duration-500 ease-in-out`}>
+                <div className={` min-sm:h-full  max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center w-2/3  max-sm:justify-end max-sm:pe-4" : (`${isHome ? "w-full" : "w-1/2"} min-w-[30vw] bg-white py-5 max-sm:py-0  rounded-xl justify-center`)} transition-all duration-500 ease-in-out`}>
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
