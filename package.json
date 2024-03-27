@@ -24,7 +24,8 @@
     "next-i18next": "^15.1.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-i18next": "^14.0.0"
+    "react-i18next": "^14.0.0",
+    "use-window-size": "^0.0.1"
   },
   "devDependencies": {
     "@types/node": "20.11.0",

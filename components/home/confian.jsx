@@ -38,8 +38,8 @@ export function Confian() {
 
     const widthLogo = Math.floor(100 / logos.length);
     return (
-        <section className="my-10">
-            <div className="my-[3vh]">
+        <section className="my-5">
+            <div className="my-[2vh]">
                 <h1 className="text-5xl">Confian</h1>
             </div>
             <div className="flex space-x-2 w-full justify-between">

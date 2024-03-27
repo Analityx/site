@@ -16,7 +16,7 @@ export function Impacto() {
         }
     ]
     return (
-        <section className="my-[10vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] px-[3vh] max-sm:mx-5">
+        <section className="my-[5vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] px-[3vh] max-sm:mx-5">
             <div className="w-2/3 max-sm:w-full relative" >
                 <Reveal>
                     <h1 className="text-5xl">Nuestro impacto</h1>

@@ -14,9 +14,9 @@ export function IntroMedios() {
 
     return (
         <section className="w-full flex pt-[5vh] max-sm:flex-wrap max-sm:px-4">
-            <div className="w-1/3 max-sm:w-full px-1">
+            <div className="w-1/3 max-sm:w-full px-4">
                 <Reveal>
-                    <h1 className="text-5xl font-bold text-[#474747] max-sm:text-4xl max-sm:mb-3">Conoce nuestros casos de estudio</h1>
+                    <h1 className="text-5xl font-[300] text-[#474747] max-sm:text-4xl max-sm:mb-3">Conoce nuestros casos de estudio</h1>
                 </Reveal>
             </div>
             <div className="w-2/3 max-sm:w-full px-3">

@@ -1,4 +1,4 @@
-import { ImageAbout } from "@/components/image";
+import { ImageNavbar } from "@/components/image";
 import { IntroMedios } from "@/components/medios/intro";
 import { MediosCasos } from "@/components/medios/medios";
 
@@ -12,7 +12,7 @@ export default function Medios() {
 
     return (
         <section className=" w-full">
-            <ImageAbout src="/assets/img/recursos/huella.png" />
+            <ImageNavbar />
             <section className="mx-auto container min-h-[45vh]">
                 <IntroMedios />
                 <MediosCasos />

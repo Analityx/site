@@ -21,6 +21,35 @@
 }
 
 
+@font-face {
+  font-family: 'YDGothic';
+  font-style: normal;
+  font-weight: 500;
+  font-display: initial;
+  src: url('/public/assets/font/ydgothic/YDGothic140Pro.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: "YDGothic2";
+  font-weight: 200;
+  src: url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.eot");
+  src: url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/ea3e7fc93b901fd715689f4e07b21d27.svg#YDGothic 140 Pro")format("svg");
+}
+
+@font-face {
+  font-family: "Arial";
+  src: url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.eot");
+  src: url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/8d223b3ad8d4819e9dcf22757e4cc2c4.svg#Arial")format("svg");
+}
+
 body {
   color: black;
   background: #fff;
@@ -41,12 +70,17 @@ h6,
 p,
 button,
 span {
-  font-family: 'Aspekta', sans-serif;
-  font-weight: 500;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+
 }
 
 
 .youngFont {
   font-family: 'Young', sans-serif;
-  font-size: 400;
+  font-size: 500;
+}
+
+.img-banner {
+  mask-image: linear-gradient(white 87%, transparent);
 }

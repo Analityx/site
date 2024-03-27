@@ -55,7 +55,8 @@ export function Navbar() {
 
 
     const links = [
-        { name: "About Us", group: false, href: "/about-us" },
+        { name: "Home", group: false, href: "./" },
+        { name: "Sobre Nosotros", group: false, href: "/about-us" },
         {
             name: "Our Services", group: true, href: ' ', items: [
                 { name: "Applied Analitycs", href: "/our-services/applied-analytics" },
@@ -63,22 +64,27 @@ export function Navbar() {
             ]
         },
         { name: "Medios", group: false, href: "/medios" },
-        { name: "Contact", group: false, href: "/contact" }
+        { name: "Contacto", group: false, href: "/contact" }
     ]
 
     return (
-        <nav className={`w-[100vw] ${isMobileMenuOpen ? " mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed bg-white " : "h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] top-0 ${isMobileMenuOpen ? " mb-2 " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "h-[10vh] fixed bg-white " : "h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto`}>
                 <div className="w-1/3 max-sm:w-2/3 flex items-center">
-                    <Link href="/" >
-                        <Image
-                            src={isNavbarFixed ? logoColor2 : (isHome ? logoColor : logoBlanco)}
-                            alt="Logo color Analityx"
-                            className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh] max-sm:h-auto"}  w-auto transition-all duration-500 ease-in-out `}
-                        />
-                    </Link>
+                    {isNavbarFixed ? (
+                        <Link href="/" >
+                            <Image
+                                src={isNavbarFixed ? logoColor : (isHome ? logoColor : logoBlanco)}
+                                alt="Logo color Analityx"
+                                className={`${isNavbarFixed ? "h-[10vh] " : "h-[12vh] max-sm:h-auto"}  w-auto transition-all duration-500 ease-in-out `}
+                            />
+                        </Link>
+                    ) : (
+                        <div></div>
+                    )}
+
                 </div>
-                <div className={`w-2/3 min-sm:h-full  max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center max-sm:justify-end max-sm:pe-4" : "bg-white py-5 max-sm:py-0  rounded-xl justify-center"} transition-all duration-500 ease-in-out`}>
+                <div className={` min-sm:h-full  max-sm:w-1/3 flex   ${isNavbarFixed ? "items-center w-2/3  max-sm:justify-end max-sm:pe-4" : (`${isHome ? "w-full" : "w-1/2" } min-w-[30vw] bg-white py-5 max-sm:py-0  rounded-xl justify-center`)} transition-all duration-500 ease-in-out`}>
                     <div className="lg:hidden cursor-pointer text-3xl	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">

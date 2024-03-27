@@ -21,7 +21,7 @@ export function DescriptionHome() {
 
 
     return (
-        <section className="w-full mt-[5vh] max-sm:mt-[2vh] ">
+        <section className="w-full mt-[2vh] max-sm:mt-[2vh] ">
             {descriptions.map((element) => (
 
                 <div className={`w-full flex min-h-[35vh] mb-6 ${element.id === "1" ? "flex-row" : "  flex-row-reverse"} max-sm:flex-wrap max-sm:mb-[4vh] `} key={element.id}>

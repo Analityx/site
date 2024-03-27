@@ -31,16 +31,16 @@ export function MediosCasos() {
     ]
 
     return (
-        <section className="flex flex-wrap space-x-[2%] my-[5%] justify-center max-sm:px-4">
+        <section className="flex flex-wrap space-x-[0.5%] space-y-[0.5%] my-[5%] justify-stars max-sm:px-4">
             {medioslinks.map((element) => (
-                <div key={element.title} className="w-[20%] max-sm:w-full min-h-[25%] max-sm:h-full max-sm:my-5 bg-[#E7E7E7] p-5 rounded-xl hover:bg-[#cfcfcf]">
+                <div key={element.title} className="w-[30%] max-sm:w-full min-h-[30%] max-sm:h-full max-sm:my-5 bg-[#E7E7E7] p-5 rounded-xl hover:bg-[#cfcfcf]">
                     <Link href={element.link} target="_blank">
                         <div className="h-2/5 flex items-center text-center">
                             <Reveal>
-                                <h1 className="mb-3 font-bold text-xl">{element.titulo}</h1>
+                                <h1 className="mb-3 font-bold text-xl p-3">{element.titulo}</h1>
                             </Reveal>
                         </div>
-                        <div className="relative h-3/5">
+                        <div className="relative h-3/5 overflow-hidden">
                             <Reveal>
                                 <Image
                                     src={element.imagen}

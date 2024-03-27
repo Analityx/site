@@ -1,5 +1,6 @@
 import { VideoPage } from "@/components/video";
 import { FormContact } from "@/components/contact/form";
+import { ImageNavbar } from "@/components/image";
 
 export const metadata = {
     title: "Contacto - Analityx",
@@ -9,7 +10,7 @@ export const metadata = {
 export default function Contact() {
     return (
         <section className=" w-full">
-            <VideoPage src="/assets/img/recursos/fondo-about-us.mp4" />
+            <ImageNavbar />
             <section className="mx-auto container">
                 <FormContact />
             </section>

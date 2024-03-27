@@ -25,10 +25,10 @@ export function Soluciones() {
         }
     ]
     return (
-        <section className="my-[5vh] " ref={ref}>
-            <div className="">
+        <section className="my-[2vh] " ref={ref}>
+            <div className="ms-5 w-full text-center">
                 <Reveal>
-                    <h1 className="text-5xl max-sm:ps-4">Soluciones</h1>
+                    <h1 className="text-5xl max-sm:ps-4 text-[#474747]">Soluciones</h1>
                 </Reveal>
             </div>
             <div className="w-full flex max-sm:flex-wrap justify-center" style={{ pathLength: scrollYProgress }}>

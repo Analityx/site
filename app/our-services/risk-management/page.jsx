@@ -1,7 +1,7 @@
 import { IntroServices } from "@/components/ourServices/intro";
 import Services from "@/components/ourServices/services";
 import { VideoPage } from "@/components/video";
-
+import { ImageNavbar } from "@/components/image";
 
 export const metadata = {
     title: "Risk Management - Analityx",
@@ -11,7 +11,7 @@ export const metadata = {
 export default function RiskManagement() {
     return (
         <section className=" w-full">
-            <VideoPage src="/assets/img/recursos/fondo-risk-management.mp4" />
+            <ImageNavbar />
             <section className="mx-auto container">
                 <IntroServices />
                 <Services type="riskManagement" />

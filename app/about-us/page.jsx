@@ -2,6 +2,9 @@ import { EquipoAbout } from "@/components/about/equipo";
 import { IntroAbout } from "@/components/about/intro";
 import { Impacto } from "@/components/home/impacto";
 import { VideoPage } from "@/components/video";
+import { ImageNavbar } from "@/components/image"
+import Image from "next/image";
+import "../globals.css";
 
 export const metadata = {
     title: "About Us - Analityx",
@@ -11,7 +14,7 @@ export const metadata = {
 export default function AboutUs() {
     return (
         <section className=" w-full">
-            <VideoPage src="/assets/img/recursos/fondo-about-us.mp4" />
+            <ImageNavbar  />
             <section className="mx-auto container">
                 <IntroAbout />
                 <EquipoAbout />
