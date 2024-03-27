@@ -5,8 +5,8 @@ ul {
   
   .item a {
     text-decoration: none;
-    width: 5vw;
-    height: 4vh;
+    width: 100px;
+    height: 45px;
     background-color: hsl(203, 92%, 97%);
     border-radius: 20px;
     display: flex;
