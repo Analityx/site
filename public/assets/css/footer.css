@@ -5,10 +5,10 @@ ul {
   
   .item a {
     text-decoration: none;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 5vw;
+    height: 4vh;
     background-color: hsl(203, 92%, 97%);
-    border-radius: 50%;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@ ul {
   }
   
   .icon {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: hsl(203, 92%, 8%);
     transition: 0.5s ease;
     z-index: 2;
@@ -57,4 +57,8 @@ ul {
   }
   #tiktok {
     --bg-color: linear-gradient(to bottom right, #FF346E, #FF346E, #000000, #23D4D3, #23D4D3) ;
+  }
+  
+  #linkedin {
+    --bg-color:  #0077b5;
   }

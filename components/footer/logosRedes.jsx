@@ -5,24 +5,24 @@ export function LogosRedes(params) {
     const logosRedes = [
         {
             link: "https://www.instagram.com/",
-            className: "fa-brands fa-instagram icon",
-            id: "instagram"
-        },
-        {
-            link: "https://twitter.com/?lang=es",
-            className: "fa-brands fa-x-twitter icon ",
-            id: "x-twitter"
-        },
-        {
-            link: "https://www.youtube.com/?hl=es",
-            className: "fa-brands fa-youtube icon",
-            id: "youtube"
-        },
-        {
-            link: "https://www.tiktok.com/es/",
-            className: "fa-brands fa-tiktok icon",
-            id: "tiktok"
+            className: "fa-brands fa-linkedin icon",
+            id: "linkedin"
         }
+        // {
+        //     link: "https://twitter.com/?lang=es",
+        //     className: "fa-brands fa-x-twitter icon ",
+        //     id: "x-twitter"
+        // },
+        // {
+        //     link: "https://www.youtube.com/?hl=es",
+        //     className: "fa-brands fa-youtube icon",
+        //     id: "youtube"
+        // },
+        // {
+        //     link: "https://www.tiktok.com/es/",
+        //     className: "fa-brands fa-tiktok icon",
+        //     id: "tiktok"
+        // }
     ]
 
     return (
