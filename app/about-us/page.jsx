@@ -14,7 +14,7 @@ export const metadata = {
 export default function AboutUs() {
     return (
         <section className=" w-full">
-            <ImageNavbar  />
+            <ImageNavbar />
             <section className="mx-auto container">
                 <IntroAbout />
                 <EquipoAbout />

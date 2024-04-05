@@ -14,30 +14,25 @@ export function HeaderNuevo() {
     useEffect(() => {
         function handleResize() {
             const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
             if (windowWidth >= 3840) {
-                setImageWidth(3840);
-                setImageHeight(2160);
-                setImage("/assets/img/nuevas/EditablesAnalityxWEB-01.png")
+                setImage("/assets/img/nuevas/Banners-01.png")
             } else if (windowWidth >= 1920) {
-                setImageWidth(1920);
-                setImageHeight(1080);
-                setImage("/assets/img/nuevas/EditablesAnalityxWEB-02.png")
+                setImage("/assets/img/nuevas/Banners-01.png")
             } else if (windowWidth >= 1080) {
-                setImageWidth(3240);
-                setImageHeight(5760);
-                setImage("/assets/img/nuevas/EditablesAnalityxWEB-04.png")
+                setImage("/assets/img/nuevas/Banners-01.png")
             } else {
-                setImageWidth(3240); // Puedes ajustar el tamaño base para pantallas más pequeñas
-                setImageHeight(5760);
-                setImage("/assets/img/nuevas/EditablesAnalityxWEB-04.png")
+                setImage("/assets/img/nuevas/Banners-04.png")
             }
+            setImageWidth(windowWidth);
+            setImageHeight(windowHeight);
         }
 
         window.addEventListener('resize', handleResize);
         handleResize();
 
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [imageWidth]);
     return (
         <motion.div initial="hidden" animate="visible" variants={{
             hidden: {
@@ -52,13 +47,15 @@ export function HeaderNuevo() {
                 }
             }
         }}
-            className="min-h-[100vh] max-sm:min-h-[70vh] max-sm:px-5 m-2">
-            <section className="overflow-hidden relative w-full min-h-[70vh] max-sm:min-h-[70vh] rounded-[50px] max-sm:rounded-xl">
-                <Image src={image}
-                    className="w-full h-[95vh] max-sm:h-[auto] img-banner-black "
+            className="min-h-[70vh] max-sm:min-h-[50vh] max-sm:px-5 m-2">
+            <section className="overflow-hidden relative w-full max-h-[90vh] max-sm:max-h-[90vh] rounded-[50px] max-sm:rounded-xl">
+                {/* <Image src={image}
+                    className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-contain "
                     alt="Separador Analytics"
                     width={imageWidth}
-                    height={imageHeight} />
+                    height={imageHeight} /> */}
+                <img src={image} alt="Header Analytics" className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-contain " />
+                <Slider />
             </section>
         </motion.div>
     )

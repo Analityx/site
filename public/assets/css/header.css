@@ -3,3 +3,13 @@
     color: #2DC9EC
 }
 
+
+.title-header {
+    font-weight: 900;
+    font-family: "Aspekta", sans-serif;
+}
+
+.parrafo-header {
+    font-weight: 400;
+    font-family: "Arial";
+}

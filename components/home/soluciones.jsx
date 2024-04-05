@@ -26,13 +26,13 @@ export function Soluciones() {
     ]
     return (
         <section className="my-[2vh] " ref={ref}>
-            <div className="ms-5 w-full text-center">
+            <div className="md:ms-5 lg:ms-5 w-full text-center">
                 <Reveal>
                     <h1 className="text-5xl max-sm:ps-4 text-[#474747]">Soluciones</h1>
                 </Reveal>
             </div>
             <div className="w-full flex max-sm:flex-wrap justify-center" style={{ pathLength: scrollYProgress }}>
-                <div className="w-2/3 max-sm:flex-wrap max-sm:w-full flex justify-center">
+                <div className="w-full max-sm:flex-wrap max-sm:w-full flex justify-center">
                     {soluciones.map((element) => (
                         <VerticalCard key={element.title} imageSrc={element.imgSrc} title={element.title} description={element.description} href={element.href} />
                     ))}

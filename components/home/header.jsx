@@ -4,6 +4,7 @@ import "../../public/assets/css/header.css"
 import Slider from "./sliderHeader"
 import { motion } from "framer-motion"
 import { Reveal } from "@/components/utils/reveal";
+import Image from "next/image"
 
 export function Header() {
     return (
@@ -22,9 +23,7 @@ export function Header() {
         }}
             className="pt-[15vh] max-sm:pt-[15vh] min-h-[100vh] max-sm:px-5">
             <section className="overflow-hidden relative w-full min-h-[70vh] max-sm:min-h-[70vh] rounded-[50px] max-sm:rounded-xl">
-                <video className="object-cover absolute w-full h-full top-0 left-0" autoPlay loop playsInline muted>
-                    <source type="video/mp4" src="/assets/img/recursos/fondo-home.mp4" />
-                </video>
+                <Image className="object-cover absolute w-full h-full top-0 left-0" src="/assets/img/nuevas/Banners-01.png" width={3280} height={1920} alt="Banner Analityx" />
                 <Slider />
             </section>
         </motion.div>

@@ -9,11 +9,10 @@ export default function HomePage() {
     return (
         <main >
             <HeaderNuevo />
-            <section className="container w-full mx-auto">
-            {/* <Header /> */}
-            <DescriptionHome />
-            <Soluciones />
-            <Impacto />
+            <section className="container w-full max-sm:mx-auto">
+                <DescriptionHome />
+                <Soluciones />
+                <Impacto />
             </section>
         </main>
     )

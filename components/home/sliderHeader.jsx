@@ -7,13 +7,17 @@ const Slider = () => {
 
     const slides = [
         {
-            title: 'Global Solutions',
-            description: 'Nuestro enfoque se basa en analizar datos para brindar servicios y soluciones digitales a problemas actuales, cuidadosamente adaptados a los objetivos de nuestros clientes.',
+            title: 'Smart Solutions for Risk Management',
+            description: 'Metodología centrada en la preservación de los intereses de nuestros clientes',
         },
         {
             title: 'Strategic Consulting',
-            description: 'Otra descripción para el segundo título.',
+            description: 'Analizamos datos para brindar soluciones digitales a los problemas de siempre',
         },
+        {
+            title: "Fostering Innovation",
+            description: "Implementamos herramientas novedosas en el mercado latinoamericano con un enfoque regional"
+        }
 
     ];
 
@@ -33,18 +37,20 @@ const Slider = () => {
             className="absolute flex flex-wrap top-[15vh] left-[8vw]"
         >
             <motion.div
-                initial={{ opacity: 0, x: -100 }}
+                initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0, }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }} className="w-full">
-                <h1 className="text-[8rem] text-white w-1/3 max-sm:text-start max-sm:text-[2.5rem] uppercase font-extrabold leading-[0.9] tracking-tighter">
+                <h1 className="title-header lg:text-[7em] md:text-[5em] text-left text-white w-2/3  max-sm:text-[2.5em] uppercase leading-[0.9] max-sm:leading-8 tracking-tighter">
                     {slides[currentSlide].title}
                 </h1>
             </motion.div>
             <motion.div
-                animate={{ x: 0, opacity: 1 }}
+                initial={{ opacity: 0, x: -200 }}
+                animate={{ opacity: 1, x: 0, }}
+                transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }}
                 className="w-full mt-[4vh]">
-                <p className="text-2xl text-white w-[65%] max-sm:text-start max-sm:w-full max-sm:font-bold max-sm:text-base ">
-                    Nuestro enfoque se basa en analizar datos para brindar servicios y soluciones digitales a problemas actuales, cuidadosamente adaptados a los objetivos de nuestros clientes.
+                <p className="lg:text-[2em] md:text-[1.5em]  parrafo-header text-left tracking-normal text-white w-[45%] max-sm:leading-4 max-sm:text-[1em] max-sm:w-[80%] max-sm:font-bold  ">
+                    {slides[currentSlide].description}
                 </p>
             </motion.div>
         </motion.div>

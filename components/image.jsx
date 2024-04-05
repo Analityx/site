@@ -13,21 +13,21 @@ export function ImageNavbar() {
         function handleResize() {
             const windowWidth = window.innerWidth;
             if (windowWidth >= 3840) {
-                setImageWidth(3840);
+                setImageWidth(window.innerWidth);
                 setImageHeight(2160);
-                setImage("/assets/img/nuevas/Banners2-06.png")
+                setImage("/assets/img/nuevas/Banners-05.png")
             } else if (windowWidth >= 1920) {
-                setImageWidth(1920);
+                setImageWidth(3840);
                 setImageHeight(1080);
-                setImage("/assets/img/nuevas/Banners2-05.png")
+                setImage("/assets/img/nuevas/Banners-06.png")
             } else if (windowWidth >= 1080) {
-                setImageWidth(1080);
+                setImageWidth(window.innerWidth);
                 setImageHeight(1920);
-                setImage("/assets/img/nuevas/Banners2-07.png")
+                setImage("/assets/img/nuevas/Banners-06.png")
             } else {
-                setImageWidth(720); // Puedes ajustar el tamaño base para pantallas más pequeñas
+                setImageWidth(window.innerWidth);
                 setImageHeight(1280);
-                setImage("/assets/img/nuevas/Banners2-08.png")
+                setImage("/assets/img/nuevas/Banners-08.png")
             }
         }
 
@@ -39,10 +39,13 @@ export function ImageNavbar() {
 
 
     return (
-        <Image src={image}
-            className="w-full h-[25vh] img-banner "
-            alt="Separador Analytics"
-            width={imageWidth}
-            height={imageHeight} />
+        <div className="overflow-hidden w-full min-h-[25vh] max-h-[35vh] flex justify-center items-start">
+            <Image src={image}
+                className="w-full h-auto object-cover"
+                alt="Separador Analytics"
+                width={imageWidth}
+                height={imageHeight}
+            />
+        </div>
     )
 };

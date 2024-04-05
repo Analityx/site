@@ -2,6 +2,7 @@
 import Image from "next/image"
 import { Reveal } from "../utils/reveal"
 import { useState } from "react";
+import "@/app/globals.css"
 
 export function EquipoAbout() {
     const [hiddenDes, setHiddenDes] = useState({})
@@ -33,6 +34,23 @@ export function EquipoAbout() {
         }
     ]
 
+    function truncateDescription(description) {
+        let truncatedDescription = description;
+        const maxLength = 100;
+
+        if (truncatedDescription.length > maxLength) {
+            const lastSpaceIndex = truncatedDescription.lastIndexOf('.', maxLength);
+            if (lastSpaceIndex !== -1) {
+                truncatedDescription = truncatedDescription.substring(0, lastSpaceIndex);
+            } else {
+                truncatedDescription = truncatedDescription.substring(0, maxLength);
+            }
+            truncatedDescription += '.';
+        }
+
+        return truncatedDescription;
+    }
+
     const handleDescription = (name) => {
         const selectedPerson = equipo.find(person => person.id === name);
 
@@ -51,14 +69,14 @@ export function EquipoAbout() {
         <section>
             <div className="w-full mt-[5vh] mb-[3vh]">
                 <Reveal>
-                    <h1 className="text-4xl font-bold text-[#474747] max-sm:ps-4">Nuestro equipo</h1>
+                    <h1 className="text-4xl font-bold text-[#474747] max-sm:ps-4 font-aspekta">Nuestro equipo</h1>
                 </Reveal>
             </div>
-            <div className="w-full flex mix-sm:max-h-[80vh] max-sm:h-full max-sm:flex-wrap" >
+            <div className="w-full flex mix-sm:max-h-[80vh] max-sm:h-auto max-sm:flex-wrap" >
                 {equipo.map((element) => (
-                    <div className="w-1/2 max-sm:w-full max-sm:mb-3 bg-[#0A0AAB] py-4 px-6 mx-6  rounded-xl max-sm:rounedd-2xl" key={element.name}>
+                    <div className="w-1/2 max-sm:w-full max-sm:mb-3 bg-[#0a0ab4] py-4 px-6 mx-6  rounded-xl max-sm:rounedd-2xl" key={element.name}>
                         <Reveal>
-                            <div className="overflow-hidden max-h-[40vh] max-sm:h-[60vh] rounded flex justify-center max-sm:rounded-xl">
+                            <div className="overflow-hidden max-h-[40vh] max-sm:max-h-[20vh]  rounded flex justify-center max-sm:rounded-xl">
                                 <Image
                                     src={element.image}
                                     alt={element.name}
@@ -75,20 +93,20 @@ export function EquipoAbout() {
                                 />
                             </div>
                         </Reveal>
-                        <div className="mt-5 space-y-5 py-7 max-sm:py-4 max-sm:space-y-2 text-white">
+                        <div className="mt-5 max-sm:mt-3 max-sm:h-full max-sm:pt-1 space-y-5 pt-7 max-sm:py-4 max-sm:space-y-1 text-white">
                             <Reveal>
-                                <h1 className="text-3xl font-bold" >{element.name}</h1>
+                                <h1 className="text-3xl font-bold font-aspekta" >{element.name}</h1>
                             </Reveal>
                             {showFullDescription[element.id] ? (
                                 <div className="hidden max-sm:block">
                                     <Reveal>
-                                        <p>{hiddenDes[element.id]}</p>
+                                        <p className="font-normal">{hiddenDes[element.id]}</p>
                                     </Reveal>
                                     <Reveal>
                                         <button onClick={() => setShowFullDescription(prevState => ({ ...prevState, [element.id]: false }))}
-                                            className="bg-transparent border-red-700 text-white border-2 rounded-[20px] font-bold px-5 py-1 my-4 "
+                                            className="bg-white  text-[#0A0AB4] border rounded px-5 py-1 mt-4 max-sm:mt-2 "
                                         >
-                                            <p className="text-xl font-bold">Cerrar</p>
+                                            <p className=" font-bold">Cerrar</p>
                                         </button>
                                     </Reveal>
 
@@ -96,11 +114,11 @@ export function EquipoAbout() {
                             ) : (
                                 <div className="hidden max-sm:block">
                                     <Reveal>
-                                        <p>{element.description.substring(0, 100)}</p>
+                                        <p className="font-normal">{truncateDescription(element.description)}</p>
                                     </Reveal>
                                     <Reveal>
                                         <button onClick={() => handleDescription(element.id)}
-                                            className="bg-transparent  text-white rounded-[20px] font-bold py-1 my-4"
+                                            className="bg-transparent border px-2 text-white rounded font-bold py-1 mt-4 max-sm:mt-2"
                                         >
                                             Leer más
                                         </button>
@@ -108,7 +126,7 @@ export function EquipoAbout() {
                                 </div>
                             )}
                             <Reveal>
-                                <p className="text-md max-sm:hidden">{element.description}</p>
+                                <p className="text-md max-sm:hidden font-normal">{element.description}</p>
                             </Reveal>
                         </div>
                     </div>

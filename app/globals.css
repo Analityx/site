@@ -7,9 +7,9 @@
 @font-face {
   font-family: 'Aspekta';
   font-style: normal;
-  font-weight: 350;
+  font-weight: 900;
   font-display: swap;
-  src: url('/public/assets/font/aspekta/webfonts/Aspekta-350.woff2') format('woff2');
+  src: url('/public/assets/font/aspekta/webfonts/Aspekta-900.woff2') format('woff2');
 }
 
 @font-face {
@@ -54,11 +54,16 @@ body {
   color: black;
   background: #fff;
   font-family: 'Aspekta', sans-serif;
+  text-align: justify;
 }
 
 a {
   font-family: 'Aspekta', sans-serif;
-  font-weight: bold;
+  font-weight: 900;
+}
+
+.font-aspekta {
+  font-family: 'Aspekta', sans-serif;
 }
 
 h1,
@@ -75,6 +80,10 @@ span {
 
 }
 
+.button-navbar-font{
+  font-family: 'Aspekta', sans-serif;
+  font-weight: 900;
+}
 
 .youngFont {
   font-family: 'Young', sans-serif;
@@ -82,5 +91,5 @@ span {
 }
 
 .img-banner {
-  mask-image: linear-gradient(white 87%, transparent);
+  mask-image: linear-gradient(white 95%, transparent);
 }
