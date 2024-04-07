@@ -25,7 +25,7 @@ export function DescriptionHome() {
             {descriptions.map((element) => (
 
                 <div className={`w-full flex min-h-[35vh] mb-6 ${element.id === "1" ? "flex-row" : "  flex-row-reverse"} max-sm:flex-wrap max-sm:mb-[4vh] `} key={element.id}>
-                    <div className="w-1/3 max-sm:w-full max-sm:mb-3">
+                    <div className="w-1/3 max-sm:w-full max-sm:mb-3 flex items-center justify-center flex-wrap min-h-[35vh]">
                         <Reveal>
                             <Image
                                 src={element.image}
@@ -36,16 +36,18 @@ export function DescriptionHome() {
                             />
                         </Reveal>
                     </div>
-                    <div className="w-2/3 mx-[5vw] max-sm:w-full">
-                        <div className="p-3  text-start border-b-[#1EA131] border-b">
-                            <Reveal>
-                                <h1 className="text-4xl font-bold text-[#474747]">{element.title}</h1>
-                            </Reveal>
-                        </div>
-                        <div className="pt-6">
-                            <Reveal>
-                                <p>{element.descriptions}</p>
-                            </Reveal>
+                    <div className="w-2/3 flex items-center flex-wrap min-h-[35vh] space-y-1 mx-[5vw] max-sm:w-full">
+                        <div className="w-full">
+                            <div className="p-3 w-full text-start border-b-[#1EA131] border-b">
+                                <Reveal>
+                                    <h1 className="text-4xl max-sm:text-3xl text-center font-bold text-[#474747]">{element.title}</h1>
+                                </Reveal>
+                            </div>
+                            <div className="pt-6">
+                                <Reveal>
+                                    <p>{element.descriptions}</p>
+                                </Reveal>
+                            </div>
                         </div>
                     </div>
                 </div>

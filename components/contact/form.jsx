@@ -4,6 +4,7 @@ import "../../public/assets/css/form.css"
 import { useEffect, useState } from "react";
 import { Reveal } from "../utils/reveal";
 import { useForm, ValidationError } from "@formspree/react";
+import "@/app/globals.css"
 // import { useForm } from '@formspree/react';
 
 export function FormContact() {
@@ -33,10 +34,10 @@ export function FormContact() {
                 <div className="w-1/2 max-sm:w-full flex justify-center items-center flex-wrap max-sm:mb-[5vh]">
                     <div className="w-full space-y-2 my-2">
                         <Reveal>
-                            <h1 className="text-4xl">Colaboremos juntos</h1>
+                            <h1 className="text-5xl max-sm:text-center font-aspekta">Trabajemos juntos</h1>
                         </Reveal>
                         <Reveal>
-                            <p className="text-xl">Empecemos un camino a entender mejor los datos</p>
+                            <p className="text-xl max-sm:text-center">Empecemos un camino a entender mejor los datos</p>
                         </Reveal>
                     </div>
                     <Reveal>
@@ -60,10 +61,10 @@ export function FormContact() {
             <div className="w-1/2 max-sm:w-full flex justify-center items-center flex-wrap">
                 <div className="w-full space-y-2 my-2">
                     <Reveal>
-                        <h1 className="text-4xl">Colaboremos juntos</h1>
+                        <h1 className="text-5xl font-aspekta max-sm:text-center">Trabajemos juntos</h1>
                     </Reveal>
                     <Reveal>
-                        <p className="text-xl">Empecemos un camino a entender mejor los datos</p>
+                        <p className="text-xl font-arial max-sm:text-center">Empecemos un camino a entender mejor los datos</p>
                     </Reveal>
                 </div>
                 <Reveal>
@@ -73,7 +74,7 @@ export function FormContact() {
             <div className="w-1/2 max-sm:w-full">
                 <form onSubmit={handleSubmit} className="mt-[5vh] mb-5 space-y-[3vh] text-center">
                     <Reveal>
-                        <h1 className="text-4xl font-bold text-[#707070] max-sm:text-3xl max-sm:pb-5 " >Completá el formulario</h1>
+                        <h1 className="text-4xl font-bold text-[#707070] max-sm:text-3xl max-sm:pb-5 font-aspekta" >Completá el formulario</h1>
                     </Reveal>
                     <div className="input-group">
                         <input type="text" autocomplete="name" id="name" name="name" required className="input-alone" value={name} onChange={(e) => setName(e.target.value)} />

@@ -70,7 +70,7 @@ export function Navbar() {
     return (
         <nav className={`w-[100vw] pt-2 top-0 ${isMobileMenuOpen ? " mb-2 bg-white " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "min-h-[10vh] fixed bg-white " : "min-h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full flex items-center  container mx-auto max-sm:mx-1  `}>
-                <div className="w-[50%] max-sm:w-[100%] flex items-center justify-end">
+                <div className="w-[50%] max-sm:w-[100%] flex items-center justify-start">
                     {isNavbarFixed ? (
                         <Link href="/" >
                             <Image

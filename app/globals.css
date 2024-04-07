@@ -63,7 +63,12 @@ a {
 }
 
 .font-aspekta {
-  font-family: 'Aspekta', sans-serif;
+  font-family: 'Aspekta', sans-serif !important;
+}
+
+.font-arial {
+  font-family: 'Arial', sans-serif !important;
+
 }
 
 h1,

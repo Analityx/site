@@ -14,7 +14,7 @@ export const VerticalCard = ({ imageSrc, title, description, href }) => {
                         <h2 className="text-2xl font-bold mb-2">{title}</h2>
                     </Reveal>
                     <Reveal>
-                        <p className="mb-4 ">{description}</p>
+                        <p className="mb-4 font-normal ">{description}</p>
                     </Reveal>
                     <Reveal>
                         <div className="max-sm:min-h-[7vh] relative">
