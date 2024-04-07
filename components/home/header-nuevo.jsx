@@ -55,7 +55,7 @@ export function HeaderNuevo() {
                     width={imageWidth}
                     height={imageHeight} /> */}
                 <img src={image} alt="Header Analytics" className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-contain " />
-                <Slider />
+                {/* <Slider /> */}
             </section>
         </motion.div>
     )
