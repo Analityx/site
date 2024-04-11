@@ -69,7 +69,7 @@ export function Navbar() {
 
     return (
         <nav className={`w-[100vw] pt-2 top-0 ${isMobileMenuOpen ? " mb-2 bg-white " : (isNavbarFixed ? "navbar-nav" : "")}  ${isNavbarFixed ? "min-h-[10vh] fixed bg-white " : "min-h-[12vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
-            <div className={`h-full w-full flex items-center  container mx-auto max-sm:mx-1  `}>
+            <div className={`h-full w-full  flex items-center md:container lg:container mx-auto max-sm:px-1  `}>
                 <div className="w-[50%] max-sm:w-[100%] flex items-center justify-start">
                     {isNavbarFixed ? (
                         <Link href="/" >
@@ -84,7 +84,7 @@ export function Navbar() {
                     )}
 
                 </div>
-                <div className={` min-sm:h-full lg:bg-white lg:px-7 lg:py-5  md:px-7 md:w-full justify-end  flex   ${isNavbarFixed ? "items-center w-2/3  max-sm:justify-end max-sm:pe-4" : (` min-w-[20vw]  max-sm:py-0  `)} rounded-xl transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "" : " "} `}>
+                <div className={` min-sm:h-full ${isNavbarFixed ? "" : "pe-2"}  lg:bg-white lg:px-7 lg:py-5  md:px-7 md:w-full justify-end  flex   ${isNavbarFixed ? "items-center w-2/3  max-sm:justify-end max-sm:pe-2" : (` min-w-[20vw]  max-sm:py-0  `)} rounded-xl transition-all duration-500 ease-in-out ${isMobileMenuOpen ? "" : " "} `}>
                     <div className="lg:hidden cursor-pointer text-3xl  rounded-xl justify-end bg-white py-2 px-6	" onClick={() => { setIsMobileMenuOpen(!isMobileMenuOpen); }}>
                         {isMobileMenuOpen ? (
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.0} stroke="currentColor" className="w-8 h-8 transition-transform duration-300 transform rotate-180 ease-in-out">
@@ -115,7 +115,7 @@ export function Navbar() {
                                             <ul className="absolute flex flex-wrap whitespace-nowrap top-full left-0 bg-white text-white mt-2 p-2 rounded">
                                                 {element.items.map((item) => (
                                                     <li key={item.name} className={`${pathname === item.href ? 'active' : ''} my-2 flex  justify-center text-center`}>
-                                                        <Link className={`${isNavbarFixed ? "text-xl" : " text-lg"} py-2 px-3`} href={item.href}>
+                                                        <Link className={`${isNavbarFixed ? "text-xl" : " text-lg"} py-2 px-3 max-sm:text-md`} href={item.href}>
                                                             {item.name}
                                                         </Link>
                                                     </li>
@@ -129,7 +129,7 @@ export function Navbar() {
                                 return (
                                     <li key={element.name} className={`${isActive ? 'active' : ''} flex  justify-center text-center`}>
                                         <Link
-                                            className={`${isNavbarFixed ? "text-xl" : "text-lg"}`}
+                                            className={`${isNavbarFixed ? "text-xl" : "text-lg"} `}
                                             href={element.href}>
                                             {element.name}
                                         </Link>
@@ -148,7 +148,7 @@ export function Navbar() {
                                 const isActiveGroup = pathname.startsWith(element.group);
                                 return (
                                     <div className={`relative ${isActiveGroup ? 'text-white' : 'text-[#707070]'} w-full text-center py-1 items-center flex justify-center`} key={element.name}>
-                                        <button onClick={toggleMenu} className={`flex button-navbar-font space-x-4 items-center text-center text-lg max-sm:text-sm font-bold`}>
+                                        <button onClick={toggleMenu} className={`flex button-navbar-font space-x-4 items-center text-center text-lg max-sm:text-md font-bold`}>
                                             {element.name}
                                             <div className="rotate-90 ">
                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="#707070" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -161,7 +161,7 @@ export function Navbar() {
                                             <ul className="absolute flex flex-wrap whitespace-nowrap top-full w-full divide-y left-0 bg-white  p-2 rounded-xl border ">
                                                 {element.items.map((item) => (
                                                     <li key={item.name} className={`${pathname === item.href ? 'text-[#1eaa32]' : 'text-[#707070]'} w-full py-1`}>
-                                                        <Link className={`text-lg max-sm:text-sm w-full `} href={item.href}>
+                                                        <Link className={`text-lg max-sm:text-md w-full `} href={item.href}>
                                                             {item.name}
                                                         </Link>
                                                     </li>
@@ -173,7 +173,7 @@ export function Navbar() {
                             } else {
                                 const isActive = pathname === (element.href)
                                 return (
-                                    <li key={element.name} className={`${isActive ? 'text-[#1eaa32]' : 'text-[#707070]'} w-full py-1 `}><Link href={element.href} className="text-lg max-sm:text-sm">{element.name}</Link></li>
+                                    <li key={element.name} className={`${isActive ? 'text-[#1eaa32]' : 'text-[#707070]'} w-full py-1 `}><Link href={element.href} className="text-lg max-sm:text-md">{element.name}</Link></li>
                                 )
                             }
                         })}

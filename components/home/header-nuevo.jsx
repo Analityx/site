@@ -47,15 +47,15 @@ export function HeaderNuevo() {
                 }
             }
         }}
-            className="min-h-[70vh] max-sm:min-h-[50vh] max-sm:px-5 m-2">
-            <section className="overflow-hidden relative w-full max-h-[90vh] max-sm:max-h-[90vh] rounded-[50px] max-sm:rounded-xl">
+            className="min-h-[70vh] max-sm:min-h-[90vh] ">
+            <section className="overflow-hidden relative w-full max-h-[90vh] max-sm:max-h-[90vh] ">
                 {/* <Image src={image}
                     className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-contain "
                     alt="Separador Analytics"
                     width={imageWidth}
                     height={imageHeight} /> */}
-                <img src={image} alt="Header Analytics" className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-contain " />
-                {/* <Slider /> */}
+                <img src={image} alt="Header Analytics" className="w-full h-[auto] max-sm:h-[auto] img-banner-black object-cover " />
+                <Slider />
             </section>
         </motion.div>
     )
