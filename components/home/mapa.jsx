@@ -1,10 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export function ImageNavbar() {
+export function Mapa() {
     const [imageWidth, setImageWidth] = useState(1920);
     const [imageHeight, setImageHeight] = useState(1080);
     const [image, setImage] = useState("")
@@ -39,13 +38,17 @@ export function ImageNavbar() {
 
 
     return (
-        <div className="overflow-hidden w-full min-h-[25vh] max-h-[35vh] flex justify-center items-start">
-            <Image src={image}
+        <div className="overflow-hidden w-full flex justify-center items-center flex-wrap">
+            {/* <Image src={image}
                 className="w-full h-auto object-cover"
                 alt="Separador Analytics"
                 width={imageWidth}
                 height={imageHeight}
-            />
+            /> */}
+            <img src="/assets/img/nuevas/Mapa con logo Analityx-01.png" alt="" className="w-full" />
+            <img src="/assets/img/nuevas/Mapas con adornos-01.png" alt="" className="w-full" />
+            <img src="/assets/img/nuevas/Mapas sin nada-01.png" alt="" className="w-full" />
+
         </div>
     )
-};
+}
