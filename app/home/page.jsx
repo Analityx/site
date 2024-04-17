@@ -14,9 +14,9 @@ export default function HomePage() {
             <section className=" w-full container mx-auto">
                 <DescriptionHome />
                 <Soluciones />
-                {/* <Impacto /> */}
+                <Impacto />
             </section>
-            < Mapa />
+            {/* < Mapa /> */}
         </main>
     )
 };
