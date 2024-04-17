@@ -34,13 +34,13 @@ const Slider = () => {
     return (
         <motion.div
             key={currentSlide}
-            className="absolute flex flex-wrap top-[15vh] left-[8vw]"
+            className="absolute flex flex-wrap top-[18vh] left-[8vw]"
         >
             <motion.div
                 initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0, }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }} className="w-full">
-                <h1 className="title-header lg:text-[7em] md:text-[5em] text-left text-white w-2/3  max-sm:text-[2.5em] uppercase leading-[0.9] max-sm:leading-8 tracking-tighter">
+                <h1 className="title-header 2xl:text-[7em] xl:text-[5em] text-left text-white w-1/2  max-sm:text-[2.5em] uppercase leading-[0.9] max-sm:leading-8 tracking-tighter">
                     {slides[currentSlide].title}
                 </h1>
             </motion.div>
@@ -49,7 +49,7 @@ const Slider = () => {
                 animate={{ opacity: 1, x: 0, }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }}
                 className="w-full mt-[4vh]">
-                <p className="lg:text-[2em] md:text-[1.5em]  parrafo-header text-left tracking-normal text-white w-[45%] max-sm:leading-4 max-sm:text-[1em] max-sm:w-[80%] max-sm:font-bold  ">
+                <p className="2xl:text-[2em] md:text-[1.5em]  parrafo-header text-left tracking-normal text-white w-[35%] 2xl:w-[50%] max-sm:leading-4 max-sm:text-[1em] max-sm:w-[80%] max-sm:font-bold  ">
                     {slides[currentSlide].description}
                 </p>
             </motion.div>

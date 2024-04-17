@@ -30,7 +30,7 @@ export function IntroServices({ type }) {
         <section className="w-full flex max-sm:flex-wrap pt-[5vh] max-sm:px-4">
             <div className="w-1/3 max-sm:w-full max-sm:mb-5 flex items-center max-sm:pb-5 px-1 max-sm:text-center md:text-left lg:text-left ">
                 <Reveal>
-                    <h1 className="font-aspekta text-5xl font-[900] text-[#474747] max-sm:text-4xl p-3 min-sm:w-[80%] ">{intro.title}</h1>
+                    <h1 className="font-aspekta 2xl:text-5xl text-4xl font-[900] text-[#474747] max-sm:text-4xl p-3 min-sm:w-[80%] ">{intro.title}</h1>
                 </Reveal>
             </div>
             <div className="w-2/3 max-sm:w-full px-3">
