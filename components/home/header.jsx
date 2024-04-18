@@ -21,7 +21,7 @@ export function Header() {
                 }
             }
         }}
-            className="pt-[15vh] max-sm:pt-[15vh] min-h-[100vh] max-sm:px-5">
+            className="mt-[12vh] max-sm:pt-[15vh] min-h-[100vh] max-sm:px-5">
             <section className="overflow-hidden relative w-full min-h-[70vh] max-sm:min-h-[70vh] rounded-[50px] max-sm:rounded-xl">
                 <Image className="object-cover absolute w-full h-full top-0 left-0" src="/assets/img/nuevas/Banners-01.png" width={3280} height={1920} alt="Banner Analityx" />
                 <Slider />

@@ -18,7 +18,7 @@ export default function AboutUs() {
             <section className="mx-auto container">
                 <IntroAbout />
                 <EquipoAbout />
-                <Impacto />
+                {/* <Impacto /> */}
             </section>
         </section>
     )

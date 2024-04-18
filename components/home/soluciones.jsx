@@ -29,7 +29,7 @@ export function Soluciones() {
         <section className="my-[2vh] " ref={ref}>
             <div className="md:ms-5 lg:ms-5 w-full text-center">
                 <Reveal>
-                    <h1 className="text-5xl max-sm:ps-4 text-[#474747] font-aspekta">Soluciones</h1>
+                    <h1 className="text-5xl text-[#474747] font-aspekta">Soluciones</h1>
                 </Reveal>
             </div>
             <div className="w-full flex max-sm:flex-wrap justify-center" style={{ pathLength: scrollYProgress }}>

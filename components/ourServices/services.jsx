@@ -202,7 +202,7 @@ export default function Services({ type }) {
                                             >
                                                 <div className="flex items-center">
                                                     <p className="font-normal me-2 font-arial ">Cerrar</p>
-                                                    <i class="fa-solid fa-xmark "></i>
+                                                    <i className="fa-solid fa-xmark "></i>
                                                 </div>
                                             </button>
                                         </div>
@@ -221,7 +221,7 @@ export default function Services({ type }) {
                                             >
                                                 <div className="flex items-center">
                                                     <p className="font-normal font-arial me-2">Leer más</p>
-                                                    <i class="fa-solid fa-arrow-down"></i>
+                                                    <i className="fa-solid fa-arrow-down"></i>
                                                 </div>
                                             </button>
                                         </div>

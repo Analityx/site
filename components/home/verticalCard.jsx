@@ -13,8 +13,10 @@ export const VerticalCard = ({ imageSrc, title, description, href, index }) => {
                             <Image src={imageSrc} alt={title} className="object-cover" width={1920} height={1080} />
                         </div>
                         <div className="md:hidden xl:hidden 2xl:hidden lg:hidden w-full flex pt-3 justify-center">
-                            <Link href={href} className=" bg-[#0A09B4] text-white border-2 rounded-[20px] font-bold border-white  px-4 py-2 hover:bg-[#1EA932]">
-                                <button className="px-4 ">Conoce Más</button>
+                            <Link href={href} className="">
+                                <button className="bg-transparent border-2 hover:bg-[#1EA131] hover:text-white border-[#1EA131] rounded-[20px] font-bold text-[#1EA131] px-4 py-2 ">
+                                    <span className="text-xl">Conoce Más</span>
+                                </button>
                             </Link>
                         </div>
                     </Reveal>
@@ -31,8 +33,10 @@ export const VerticalCard = ({ imageSrc, title, description, href, index }) => {
                                 </div>
                             </div>
                             <div className="max-sm:hidden w-full flex pt-3 justify-center">
-                                <Link href={href} className=" bg-[#0A09B4] text-white border-2 rounded-[20px] font-bold border-white  px-4 py-2 hover:bg-[#1EA932]">
-                                    <button className="px-4 ">Conoce Más</button>
+                                <Link href={href} className="">
+                                    <button className="bg-transparent border-2 hover:bg-[#1EA131] hover:text-white border-[#1EA131] rounded-[20px] font-bold text-[#1EA131] px-4 py-2 ">
+                                        <span className="text-xl">Conoce Más</span>
+                                    </button>
                                 </Link>
                             </div>
                         </Reveal>

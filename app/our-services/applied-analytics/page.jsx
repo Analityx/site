@@ -13,7 +13,7 @@ export default function AppliedAnalytics() {
         <section className=" w-full">
             <ImageNavbar />
             <section className="mx-auto container">
-                <IntroServices />
+                <IntroServices type="appliedAnalytics"  />
                 <Services type="appliedAnalytics" />
             </section>
         </section>

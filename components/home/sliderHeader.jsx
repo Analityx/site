@@ -7,15 +7,15 @@ const Slider = () => {
 
     const slides = [
         {
-            title: 'Smart Solutions for Risk Management',
-            description: 'Metodología centrada en la preservación de los intereses de nuestros clientes',
-        },
-        {
             title: 'Strategic Consulting',
             description: 'Analizamos datos para brindar soluciones digitales a los problemas de siempre',
         },
         {
-            title: "Fostering Innovation",
+            title: 'Smart Solutions',
+            description: 'Metodología centrada en la preservación de los intereses de nuestros clientes',
+        },
+        {
+            title: "Fostering innovation",
             description: "Implementamos herramientas novedosas en el mercado latinoamericano con un enfoque regional"
         }
 

@@ -15,7 +15,7 @@ export function Mapa() {
                 setImageWidth(window.innerWidth);
                 setImageHeight(2160);
                 setImage("/assets/img/nuevas/Banners-005.png")
-            } else if (windowWidth <= 1900) {
+            } else if (windowWidth <= 1899 && windowWidth >= 1081) {
                 setImageWidth(3840);
                 setImageHeight(1080);
                 setImage("/assets/img/nuevas/Banners-006.png")

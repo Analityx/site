@@ -16,14 +16,14 @@ export function ImageNavbar() {
                 setImageWidth(window.innerWidth);
                 setImageHeight(2160);
                 setImage("/assets/img/nuevas/Banners-005.png")
-            } else if (windowWidth <= 1900) {
+            } else if (windowWidth <= 1900 && windowWidth >= 1081) {
                 setImageWidth(3840);
                 setImageHeight(1080);
                 setImage("/assets/img/nuevas/Banners-006.png")
             } else if (windowWidth >= 1080) {
                 setImageWidth(window.innerWidth);
                 setImageHeight(1920);
-                setImage("/assets/img/nuevas/Banners-006.png")
+                setImage("/assets/img/nuevas/Banners-007.png")
             } else {
                 setImageWidth(window.innerWidth);
                 setImageHeight(1280);
@@ -39,13 +39,14 @@ export function ImageNavbar() {
 
 
     return (
-        <div className="overflow-hidden w-full min-h-[25vh] max-h-[35vh] flex justify-center items-start">
-            <Image src={image}
+        <div className="overflow-hidden w-full mt-[10vh] min-h-[25vh] max-h-[35vh] flex justify-center items-start">
+            {/* <Image src={image}
                 className="w-full h-auto object-cover"
                 alt="Separador Analytics"
                 width={imageWidth}
                 height={imageHeight}
-            />
+            /> */}
+            <img src={image} alt="Banner Analytics" className="w-full h-auto object-cover" />
         </div>
     )
 };

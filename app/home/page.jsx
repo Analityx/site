@@ -10,8 +10,8 @@ import { Mapa } from "@/components/home/mapa";
 export default function HomePage() {
     return (
         <main >
-            <HeaderNuevo />
             <section className=" w-full container mx-auto">
+            <HeaderNuevo />
                 <DescriptionHome />
                 <Soluciones />
                 <Impacto />
