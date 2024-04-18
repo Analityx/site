@@ -17,7 +17,7 @@ export function IntroMedios() {
         <section className="w-full flex pt-[5vh] max-sm:flex-wrap max-sm:px-4">
             <div className="w-full max-sm:w-full justify-center  max-sm:mb-5 flex items-center max-sm:pb-5 px-1 max-sm:text-center md:text-left lg:text-left ">
                 <Reveal>
-                    <h1 className="font-aspekta 2xl:text-5xl uppercase lg:text-4xl font-[900] text-[#474747] max-sm:text-4xl p-3 min-sm:w-[80%]">Analityx en los medios</h1>
+                    <h1 className="font-aspekta 2xl:text-6xl capital lg:text-5xl font-[900] text-[#474747] max-sm:text-4xl p-3 min-sm:w-[80%]">Analityx en los medios</h1>
                 </Reveal>
             </div>
             {/* <div className="w-2/3 max-sm:w-full px-3">

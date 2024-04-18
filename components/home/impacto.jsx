@@ -39,9 +39,11 @@ export function Impacto() {
                 </div>
             </div>
             <div className="w-1/2  max-sm:w-full items-center flex justify-center max-sm:mt-5 ">
-                <div className=" overflow-hidden w-full ">
-                    <img src="/assets/img/nuevas/MAPASv2-01.png" alt="Mapa puntos estrategicos" className="w-full h-auto object-cover rounded-[20px]" />
-                </div>
+                <Reveal>
+                    <div className=" overflow-hidden w-full ">
+                        <img src="/assets/img/nuevas/MAPASv2-01.png" alt="Mapa puntos estrategicos" className="w-full h-auto object-cover rounded-[20px]" />
+                    </div>
+                </Reveal>
             </div>
         </section>
     )
