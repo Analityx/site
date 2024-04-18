@@ -14,7 +14,7 @@ export function Footer() {
             <Reveal>
                 <div className="bg-[#1EA131] w-full max-sm:flex-wrap rounded-xl min-h-[20vh] flex py-5 px-3 max-sm:mb-3 ">
                     <div className="w-1/4 max-sm:w-full flex flex-wrap ">
-                        <Link href="/" className="w-full">
+                        <Link href="/" className="w-full flex justify-center">
                             <Image src="/assets/img/logo/SVG/analityx-logo-blanco-color.svg"
                                 className="w-[317px] h-[10vh]" width={1920} height={600} alt="Analityx color" />
                         </Link>
