@@ -15,19 +15,19 @@ export function ImageNavbar() {
             if (windowWidth >= 1900) {
                 setImageWidth(window.innerWidth);
                 setImageHeight(2160);
-                setImage("/assets/img/nuevas/Banners-005.png")
+                setImage("/assets/img/nuevas/Banners-051.png")
             } else if (windowWidth <= 1900 && windowWidth >= 1081) {
                 setImageWidth(3840);
                 setImageHeight(1080);
-                setImage("/assets/img/nuevas/Banners-006.png")
+                setImage("/assets/img/nuevas/Banners-061.png")
             } else if (windowWidth >= 1080) {
                 setImageWidth(window.innerWidth);
                 setImageHeight(1920);
-                setImage("/assets/img/nuevas/Banners-007.png")
+                setImage("/assets/img/nuevas/Banners-071.png")
             } else {
                 setImageWidth(window.innerWidth);
                 setImageHeight(1280);
-                setImage("/assets/img/nuevas/Banners-008.png")
+                setImage("/assets/img/nuevas/Banners-081.png")
             }
         }
 
