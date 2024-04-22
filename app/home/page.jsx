@@ -11,7 +11,7 @@ export default function HomePage() {
     return (
         <main >
             <section className=" w-full container mx-auto">
-            <HeaderNuevo />
+                <HeaderNuevo />
                 <DescriptionHome />
                 <Soluciones />
                 <Impacto />

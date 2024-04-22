@@ -4,7 +4,7 @@ import Link from "next/link"
 export function LogosRedes(params) {
     const logosRedes = [
         {
-            link: "https://www.linkedin.com/",
+            link: "https://www.linkedin.com/company/analityxsolutions/?viewAsMember=true",
             className: "fa-brands fa-linkedin icon",
             id: "linkedin"
         }
