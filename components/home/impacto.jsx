@@ -20,11 +20,11 @@ export function Impacto() {
         <section className="my-[5vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] max-sm:pt-[3vh] max-sm:pb-[2vh]  px-[3vh] max-sm:mx-5">
             <div className="w-1/2 max-sm:w-full relative" >
                 <Reveal>
-                    <h1 className="text-5xl max-sm:text-4xl max-sm:text-center ">Nuestro impacto</h1>
+                    <h2 className="2xl:text-4xl lg:text-3xl font-aspekta max-sm:pb-1 pb-5 text-3xl text-center font-bold text-[#474747]">Nuestro impacto</h2>
                 </Reveal>
-                <div className="w-[100%] max-sm:w-full mt-6">
+                <div className="w-[100%] max-sm:w-full mt-6 max-sm:mt-3">
                     <Reveal>
-                        <p>Contamos con presencia regional en Buenos Aires, Miami, San Pablo, Ciudad de México, Uruguay, Santiago y Lima. Hemos desarrollado asociaciones estratégicas con empresas y consultores en toda América Latina para ofrecer soluciones integrales y adaptadas a las necesidades específicas de cada mercado. Nuestra red nos permite tener un profundo conocimiento local y acceso a recursos especializados, garantizando un servicio de alto nivel.</p>
+                        <p className="mb-4 max-sm:mb-2 font-arial">Contamos con presencia regional en Buenos Aires, Miami, San Pablo, Ciudad de México, Uruguay, Santiago y Lima. Hemos desarrollado asociaciones estratégicas con empresas y consultores en toda América Latina para ofrecer soluciones integrales y adaptadas a las necesidades específicas de cada mercado. Nuestra red nos permite tener un profundo conocimiento local y acceso a recursos especializados, garantizando un servicio de alto nivel.</p>
                     </Reveal>
                     <Reveal>
                         <div className="mt-7 w-full max-sm:flex max-sm:justify-center">
