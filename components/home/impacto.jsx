@@ -17,7 +17,7 @@ export function Impacto() {
         }
     ]
     return (
-        <section className="my-[5vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] px-[3vh] max-sm:mx-5">
+        <section className="my-[5vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] max-sm:pt-[3vh] max-sm:pb-[2vh]  px-[3vh] max-sm:mx-5">
             <div className="w-1/2 max-sm:w-full relative" >
                 <Reveal>
                     <h1 className="text-5xl max-sm:text-4xl max-sm:text-center ">Nuestro impacto</h1>
@@ -35,10 +35,6 @@ export function Impacto() {
                             </Link>
                         </div>
                     </Reveal>
-
-                </div>
-                <div className="absolute max-sm:w-full max-sm:flex max-sm:justify-center max-sm:pt-5 max-sm:relative max-sm:mt-3 bottom-2 ">
-
                 </div>
             </div>
             <div className="w-1/2  max-sm:w-full items-center flex justify-end max-sm:justify-center max-sm:mt-5 ">
