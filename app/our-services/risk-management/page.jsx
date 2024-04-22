@@ -12,7 +12,7 @@ export default function RiskManagement() {
     return (
         <section className=" w-full">
             {/* <ImageNavbar /> */}
-            <section className="mx-auto container mt-[8vh]">
+            <section className="mx-auto container mt-[8vh] md:px-[50px]">
                 <IntroServices type="riskManagement" />
                 <Services type="riskManagement" />
             </section>

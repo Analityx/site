@@ -15,7 +15,7 @@ export default function AboutUs() {
     return (
         <section className=" w-full">
             {/* <ImageNavbar /> */}
-            <section className="mx-auto container mt-[8vh]">
+            <section className="mx-auto container mt-[8vh] md:px-[50px]">
                 <IntroAbout />
                 <EquipoAbout />
                 {/* <Impacto /> */}
