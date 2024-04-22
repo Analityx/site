@@ -71,7 +71,7 @@ export function Navbar() {
     ]
 
     return (
-        <nav className={`w-[100vw] top-0 ${isMobileMenuOpen ? " mb-2 bg-white " : (isHome ? (isNavbarFixed2 ? "navbar-nav" : "") : "navbar-nav")}  ${isNavbarFixed ? "min-h-[10vh] fixed bg-white " : "min-h-[11vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
+        <nav className={`w-[100vw] top-0 ${isMobileMenuOpen ? " mb-2 bg-white " :  (isNavbarFixed2 ? "navbar-nav" : "")}  ${isNavbarFixed ? "min-h-[10vh] fixed bg-white " : "min-h-[11vh] absolute "}  z-50 transition-all duration-300 ease-in-out `}>
             <div className={`h-full w-full  flex items-center md:container lg:container mx-auto max-sm:px-1  `}>
                 <div className="w-[50%] max-sm:w-[100%] flex items-center justify-start">
                     {isNavbarFixed ? (

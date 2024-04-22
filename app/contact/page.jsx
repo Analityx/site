@@ -10,8 +10,8 @@ export const metadata = {
 export default function Contact() {
     return (
         <section className=" w-full">
-            <ImageNavbar />
-            <section className="mx-auto container">
+            {/* <ImageNavbar /> */}
+            <section className="mx-auto container mt-[8vh]">
                 <FormContact />
             </section>
         </section>

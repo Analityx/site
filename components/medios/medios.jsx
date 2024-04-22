@@ -27,6 +27,48 @@ export function MediosCasos() {
             imagen: "/assets/img/medios/elNorteGrandeLeAporto.png",
             titulo: "El Norte Grande le aportó el 26% de los votos a Massa",
             medio: "La Gaceta"
+        },
+        {
+            link: "https://www.iproup.com/economia-digital/46884-soluciones-aporta-inteligencia-artificial-para-vencer-ciberataques-fraude-corporativo",
+            imagen: "/assets/img/medios/iproup.png",
+            titulo: "5 soluciones que aporta la IA para vencer los ciberataques y el fraude corporativo",
+            medio: "IPropUp"
+        },
+        {
+            link: "https://www.iprofesional.com/tecnologia/399274-cuales-son-los-fraudes-informaticos-mas-comunes-en-la-argentina",
+            imagen: "/assets/img/medios/forbes.png",
+            titulo: "El delito corporativo, una problemática que padecen ocho de cada diez empresas en la Argentina",
+            medio: "Forbes"
+        },
+        {
+            link: "https://www.forbesargentina.com/columnistas/el-delito-corporativo-una-problematica-padecen-ocho-cada-diez-empresas-argentina-n44410",
+            imagen: "/assets/img/medios/iprofesional.png",
+            titulo: "Alerta por fraudes informáticos en la Argentina: ¿cómo se los puede prevenir?",
+            medio: "iProfesional"
+        },
+        {
+            link: "https://www.ambito.com/negocios/las-nuevas-mascaras-del-fraude-la-era-del-chat-gpt-n5752025",
+            imagen: "/assets/img/medios/ambito.png",
+            titulo: "Las nuevas máscaras del fraude en la era del chat GPT",
+            medio: "Ámbito Financiero"
+        },
+        {
+            link: "https://www.infobae.com/opinion/2023/09/21/el-delito-corporativo-una-problematica-que-padecen-ocho-de-cada-diez-empresas-en-la-argentina/",
+            imagen: "/assets/img/medios/infobae-1.png",
+            titulo: "El delito corporativo, una problemática que padecen ocho de cada diez empresas en la Argentina",
+            medio: "Infobae"
+        },
+        {
+            link: "https://www.infobae.com/economia/2023/11/29/clima-laboral-pistas-para-detectar-un-fraude-a-tiempo/",
+            imagen: "/assets/img/medios/infobae-2.png",
+            titulo: "Clima laboral: pistas para detectar un fraude a tiempo",
+            medio: "Infobae"
+        },
+        {
+            link: "https://fortuna.perfil.com/noticias/opinion/el-futuro-de-los-pronosticos-o-porque-las-encuestas-nos-fallan.phtml",
+            imagen: "/assets/img/medios/fortuna-perfil.png",
+            titulo: "El futuro de los pronósticos, o porqué las encuestas nos fallan",
+            medio: "Revista Fortuna"
         }
     ]
 

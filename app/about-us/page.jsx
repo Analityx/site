@@ -14,8 +14,8 @@ export const metadata = {
 export default function AboutUs() {
     return (
         <section className=" w-full">
-            <ImageNavbar />
-            <section className="mx-auto container">
+            {/* <ImageNavbar /> */}
+            <section className="mx-auto container mt-[8vh]">
                 <IntroAbout />
                 <EquipoAbout />
                 {/* <Impacto /> */}

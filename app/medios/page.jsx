@@ -12,8 +12,8 @@ export default function Medios() {
 
     return (
         <section className=" w-full">
-            <ImageNavbar />
-            <section className="mx-auto container min-h-[45vh]">
+            {/* <ImageNavbar /> */}
+            <section className="mx-auto container min-h-[45vh] mt-[8vh]">
                 <IntroMedios />
                 <MediosCasos />
             </section>

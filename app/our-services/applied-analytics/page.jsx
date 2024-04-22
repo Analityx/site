@@ -11,8 +11,8 @@ export const metadata = {
 export default function AppliedAnalytics() {
     return (
         <section className=" w-full">
-            <ImageNavbar />
-            <section className="mx-auto container">
+            {/* <ImageNavbar /> */}
+            <section className="mx-auto container mt-[8vh]">
                 <IntroServices type="appliedAnalytics"  />
                 <Services type="appliedAnalytics" />
             </section>
