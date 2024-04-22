@@ -10,7 +10,7 @@ import { Mapa } from "@/components/home/mapa";
 export default function HomePage() {
     return (
         <main >
-            <section className=" w-full container mx-auto">
+            <section className=" w-full container mx-auto md:mx-[50px]">
                 <HeaderNuevo />
                 <DescriptionHome />
                 <Soluciones />
