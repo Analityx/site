@@ -8,13 +8,13 @@ export function DescriptionHome() {
             id: "1",
             title: "Transformamos datos en información",
             descriptions: "En Analityx, creemos firmemente que la información es el recurso más valioso que puede tener cualquier organización. En un mundo cada vez más competitivo, ofrecemos herramientas orientadas a la acción y a obtener una clara ventaja para nuestros clientes. Somos el puente entre el caos de los datos y las decisiones, superando barreras y proporcionando insights valiosos para organizaciones e instituciones en toda la región.",
-            image: "/assets/img/recursos/analytics.svg"
+            image: "/assets/img/nuevas/Ilustraciones-03.png"
         },
         {
             id: "2",
             title: "Inteligencia Estratégica",
             descriptions: "Nos especializamos en el análisis y la recopilación sistemática de información para que nuestros clientes puedan tomar decisiones informadas.  Las industrias líderes reconocen que estar un paso adelante, conocer las estrategias de la competencia y anticipar movimientos del mercado son factores cruciales para mantenerse en la cima.",
-            image: "/assets/img/recursos/data.svg"
+            image: "/assets/img/nuevas/Ilustraciones-04.png"
 
         }
     ]

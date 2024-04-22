@@ -7,11 +7,11 @@ export function LinksFooter() {
             title: "About Us"
         },
         {
-            link: "our-services",
+            link: "/our-services/applied-analytics",
             title: "Applied Analytics"
         },
         {
-            link: "/risk-management",
+            link: "/our-services/risk-management",
             title: "Bussiness Intelligence"
         },
         {

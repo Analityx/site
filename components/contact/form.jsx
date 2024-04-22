@@ -41,7 +41,7 @@ export function FormContact() {
                         </Reveal>
                     </div>
                     <Reveal>
-                        <Image src="/assets/img/recursos/contact.svg" alt="Illustration contact" className="w-[75%]" width={400} height={400} />
+                        <Image src="/assets/img/nuevas/Ilustraciones-02.png" alt="Illustration contact" className="w-[75%]" width={400} height={400} />
                     </Reveal>
                 </div>
                 <div className="w-1/2 max-sm:w-full flex justify-center flex-wrap items-center ">
@@ -68,7 +68,7 @@ export function FormContact() {
                     </Reveal>
                     <Reveal>
                         <div className="w-full flex justify-center pt-5">
-                            <Image src="/assets/img/recursos/contact.svg" alt="Illustration contact" className="w-[60%] max-sm:w-full max-sm:my-3" width={400} height={400} />
+                            <Image src="/assets/img/nuevas/Ilustraciones-02.png" alt="Illustration contact" className="w-[60%] max-sm:w-full max-sm:my-3" width={400} height={400} />
                         </div>
                     </Reveal>
                 </div>
