@@ -13,14 +13,14 @@ export function Soluciones() {
     })
     const soluciones = [
         {
-            imgSrc: "/assets/img/recursos/mapa.png",
+            imgSrc: "/assets/img/applied.jpeg",
             title: "Applied Analytics",
             description: "No sólo generamos análisis de datos complejos, sino que también los traducimos en recomendaciones claras y accionables para nuestros clientes. Entendemos que la toma de decisiones basada en datos debe ser sencilla y efectiva, y trabajamos incansablemente para proporcionar informes y visualizaciones que sean fáciles de comprender y aplicar en el mundo real",
             href: "/our-services/applied-analytics"
         },
         {
-            imgSrc: "/assets/img/recursos/huella.png",
-            title: "Business Intelligence",
+            imgSrc: "/assets/img/risk.jpeg",
+            title: "Risk Management",
             description: "No sólo generamos análisis de datos complejos, sino que también los traducimos en recomendaciones claras y accionables para nuestros clientes. Entendemos que la toma de decisiones basada en datos debe ser sencilla y efectiva, y trabajamos incansablemente para proporcionar informes y visualizaciones que sean fáciles de comprender y aplicar en el mundo real",
             href: "/our-services/risk-management"
         }
