@@ -10,7 +10,7 @@ export const VerticalCard = ({ imageSrc, title, description, href, index }) => {
                 <div className="w-1/2 max-sm:w-full px-2 ">
                     <Reveal>
                         <div className=" overflow-hidden max-h-[45vh] rounded-2xl">
-                            <Image src={imageSrc} alt={title} className="object-cover" width={1920} height={1080} />
+                            <Image src={imageSrc} alt={title} className="object-contain aspect-[3/2] max-h-[45vh]" width={1920} height={1080} />
                         </div>
                         <div className="md:hidden xl:hidden 2xl:hidden lg:hidden w-full flex pt-3 justify-center">
                             <Link href={href} className="">
