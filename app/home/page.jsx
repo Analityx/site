@@ -6,7 +6,7 @@ import { HeaderNuevo } from "@/components/home/header-nuevo";
 import { Impacto } from "@/components/home/impacto";
 import { Soluciones } from "@/components/home/soluciones";
 import { Mapa } from "@/components/home/mapa";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Loading from '@/app/loading';
 
 export default function HomePage() {
