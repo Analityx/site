@@ -5,7 +5,6 @@ import { HeaderNuevo } from "@/components/home/header-nuevo";
 import { Impacto } from "@/components/home/impacto";
 import { Soluciones } from "@/components/home/soluciones";
 import { Mapa } from "@/components/home/mapa";
-import Loading from "@/app/Loading"
 
 export default function HomePage() {
     return (
