@@ -20,7 +20,7 @@ export function Impacto() {
         <section className="my-[5vh] flex max-sm:flex-wrap min-h-[50vh] bg-[#E7E7E7] rounded-[20px] py-[5vh] max-sm:pt-[3vh] max-sm:pb-[2vh]  px-[3vh] max-sm:mx-5">
             <div className="w-1/2 max-sm:w-full relative" >
                 <Reveal>
-                    <h2 className="2xl:text-4xl lg:text-3xl font-aspekta max-sm:pb-1 pb-5 text-3xl max-sm:text-center text-left font-bold text-[#474747]">Nuestro presencia</h2>
+                    <h2 className="2xl:text-4xl lg:text-3xl font-aspekta max-sm:pb-1 pb-5 text-3xl max-sm:text-center text-left font-bold text-[#474747]">Nuestra presencia</h2>
                 </Reveal>
                 <div className="w-[100%] max-sm:w-full mt-6 max-sm:mt-3">
                     <Reveal>
