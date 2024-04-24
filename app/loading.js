@@ -10,7 +10,7 @@ export default function Loading() {
           <img
             src="/assets/img/analityx-logo-color.png"
             alt="Logo analityx"
-            className="w-[20%] h-auto"
+            className="w-[20%] max-sm:w-[100%] h-auto"
           />
         </div>
         <div className="flex items-center justify-center">

@@ -16,25 +16,25 @@ export default function HomePage() {
     };
 
     useEffect(() => {
-        const handleLoad = () => {
+        const handleDOMContentLoaded = () => {
             setIsLoading(false);
         };
-        window.addEventListener('load', handleLoad);
+
+        document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
+
         return () => {
-            window.removeEventListener('load', handleLoad);
+            document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
         };
     }, []);
     return (
         <main >
             {isLoading && <Loading />}
-            {!isLoading && (
-                <section className=" w-full container mx-auto md:px-[50px]" onLoad={handlePageLoad}>
-                    <HeaderNuevo />
-                    <DescriptionHome />
-                    <Soluciones />
-                    <Impacto />
-                </section>
-            )}
+            <section className=" w-full container mx-auto md:px-[50px]" onLoad={handlePageLoad}>
+                <HeaderNuevo />
+                <DescriptionHome />
+                <Soluciones />
+                <Impacto />
+            </section>
             {/* < Mapa /> */}
         </main>
     )
