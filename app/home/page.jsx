@@ -11,24 +11,41 @@ import Loading from '@/app/loading';
 
 export default function HomePage() {
     const [isLoading, setIsLoading] = useState(true);
+    const [cargando, setCargando] = useState(true);
+
     const handlePageLoad = () => {
-        setIsLoading(false); // Indica que la página ha cargado completamente
+        setIsLoading(false); 
     };
+
+    useEffect(() => {
+        const cargarPagina = () => {
+            if (document.readyState === 'complete') {
+                setCargando(false);
+            } else {
+                setCargando(true);
+            }
+        };
+        document.addEventListener('readystatechange', cargarPagina);
+        return () => {
+            document.removeEventListener('readystatechange', cargarPagina);
+        };
+    }, [cargando]);
+
 
     useEffect(() => {
         const handleDOMContentLoaded = () => {
             setIsLoading(false);
         };
-
         document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
-
         return () => {
             document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
         };
     }, []);
+
+
     return (
         <main >
-            {isLoading && <Loading />}
+            {cargando && <Loading />}
             <section className=" w-full container mx-auto md:px-[50px]" onLoad={handlePageLoad}>
                 <HeaderNuevo />
                 <DescriptionHome />
