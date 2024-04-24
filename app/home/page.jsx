@@ -12,15 +12,21 @@ import Loading from '@/app/loading';
 export default function HomePage() {
     const [isLoading, setIsLoading] = useState(true);
     const [cargando, setCargando] = useState(true);
+    const [loadedOnce, setLoadedOnce] = useState(false);
+
 
     const handlePageLoad = () => {
         setIsLoading(false);
+        setLoadedOnce(true);
     };
 
     useEffect(() => {
         const cargarPagina = () => {
-            if (document.readyState === 'complete') {
-                setCargando(false);
+            if (document.readyState == "loaded" || document.readyState == "interactive" || document.readyState == "complete") {
+                if (!loadedOnce) {
+                    setCargando(false);
+                    setLoadedOnce(true);
+                }
             } else {
                 setCargando(true);
             }
@@ -29,24 +35,12 @@ export default function HomePage() {
         return () => {
             document.removeEventListener('readystatechange', cargarPagina);
         };
-    }, [cargando]);
-
-
-    useEffect(() => {
-        const handleDOMContentLoaded = () => {
-            setIsLoading(false);
-        };
-        document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
-        return () => {
-            document.removeEventListener('DOMContentLoaded', handleDOMContentLoaded);
-        };
-    }, []);
-
+    }, [loadedOnce]);
     const cargandoMemo = useMemo(() => cargando, [cargando]);
 
     return (
         <main >
-            {cargandoMemo && <Loading />}
+            {cargandoMemo && !loadedOnce && <Loading />}
             <section className=" w-full container mx-auto md:px-[50px]" onLoad={handlePageLoad}>
                 <HeaderNuevo />
                 <DescriptionHome />
