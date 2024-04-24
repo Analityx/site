@@ -14,7 +14,7 @@ export default function HomePage() {
     const [cargando, setCargando] = useState(true);
 
     const handlePageLoad = () => {
-        setIsLoading(false); 
+        setIsLoading(false);
     };
 
     useEffect(() => {
@@ -42,10 +42,11 @@ export default function HomePage() {
         };
     }, []);
 
+    const cargandoMemo = useMemo(() => cargando, [cargando]);
 
     return (
         <main >
-            {cargando && <Loading />}
+            {cargandoMemo && <Loading />}
             <section className=" w-full container mx-auto md:px-[50px]" onLoad={handlePageLoad}>
                 <HeaderNuevo />
                 <DescriptionHome />
