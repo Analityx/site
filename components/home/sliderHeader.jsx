@@ -40,9 +40,14 @@ const Slider = () => {
                 initial={{ opacity: 0, x: -200 }}
                 animate={{ opacity: 1, x: 0, }}
                 transition={{ duration: 0.5, ease: "easeIn", delay: 0.25 }} className="w-full">
+<<<<<<< HEAD
                 <h1 className="title-header 2xl:text-[7em] xl:text-[5em] max-md:text-[3em] text-left text-white w-1/2  max-sm:text-[2.5em] uppercase leading-[0.9] max-sm:leading-8 tracking-tighter">
                     {slides[currentSlide].title} 
                     
+=======
+                <h1 className="title-header max-2xl:text-[7em] xl:text-[5em] md:text-[5em] text-left text-white w-1/2  max-sm:text-[2.5em] uppercase leading-[0.9] max-sm:leading-8 tracking-tighter">
+                    {slides[currentSlide].title}
+>>>>>>> 6d1df78336e01a0a2727c7aab2cfee7cf5e4af67
                 </h1>
             </motion.div>
             <motion.div

@@ -13,13 +13,13 @@ export function Soluciones() {
     })
     const soluciones = [
         {
-            imgSrc: "/assets/img/recursos/mapa.png",
+            imgSrc: "/assets/img/applied.jpeg",
             title: "Applied Analytics",
             description: "Esta unidad de negocios es la encargada del diseño de estrategias a partir de la inteligencia de datos. Utilizamos modelos estadísticos para predecir comportamientos e intervenir en la realidad, además de generar insumos en las decisiones de gestión de tu organización.",
             href: "/our-services/applied-analytics"
         },
         {
-            imgSrc: "/assets/img/recursos/huella.png",
+            imgSrc: "/assets/img/risk.jpeg",
             title: "Business Intelligence",
             description: "Es el área encargada de las evaluaciones de gestión, auditorías financieras e informes de riesgo. Identificamos potenciales puntos de conflicto hacia dentro y fuera de tu organización, además de estandarizar planes de gestión de crisis e investigación sobre competidores y contextos.",
             href: "/our-services/risk-management"
