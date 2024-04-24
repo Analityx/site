@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -32,9 +34,11 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={inter.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <Suspense fallback={<Loading />}>
+          <Navbar />
+          {children}
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

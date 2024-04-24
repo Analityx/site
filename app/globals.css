@@ -98,3 +98,38 @@ span {
 .img-banner {
   mask-image: linear-gradient(white 95%, transparent);
 }
+
+
+.preloader-container {
+  width: 300px;
+  height: 5px; /* Ajusta el grosor del preloader aquí */
+  position: relative;
+  background-color: #f0f0f0; /* Color de fondo del preloader */
+  border-radius: 20px;
+}
+
+.preloader {
+  width: 25%; /* Ajusta el tamaño inicial del preloader aquí */
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: #0A09B4; /* Color del preloader */
+  animation: moveLinear 2s linear infinite; /* Ajusta la duración de la animación aquí */
+}
+
+@keyframes moveLinear {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 75%;
+    background-color: #1EAA32;
+  }
+  100% {
+    right: 0%;
+    background-color: #1EAA32;
+
+  }
+}
