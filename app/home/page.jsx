@@ -22,7 +22,7 @@ export default function HomePage() {
 
     useEffect(() => {
         const cargarPagina = () => {
-            if (document.readyState === "loaded" || document.readyState === "interactive" || document.readyState === "complete") {
+            if (document.readyState === "complete") {
                 if (!loadedOnce) {
                     setCargando(false);
                     setLoadedOnce(true);
