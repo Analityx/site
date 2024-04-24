@@ -10,7 +10,6 @@ import Loading from "@/app/Loading"
 export default function HomePage() {
     return (
         <main >
-            <Loading />
             <section className=" w-full container mx-auto md:px-[50px]">
                 <HeaderNuevo />
                 <DescriptionHome />
